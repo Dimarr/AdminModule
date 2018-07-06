@@ -19,14 +19,12 @@ if (!isset($_SESSION["is_auth"])){
 <button type="submit" class="show_button" onclick="search('sps')">Search</button>
 <button type="submit" class="show_button" onclick="online_sps()">Show online SPs</button>
 <button type="submit" class="show_button" align="right" onclick="logout()">Logout</button>
-<br>
-<body>
-<div id="wrapper">
 
 <?php
 //echo "eeee";
 $ini_array = parse_ini_file("options.ini");
 $link = mysqli_connect($ini_array["url"], $ini_array["user"], $ini_array["password"], $ini_array["database"]);
+echo "<div style=\"text-align:center;\"><b>  Market Fee value is ".$ini_array["marketfee"]." %</div>";
 //echo $_SERVER['DOCUMENT_ROOT'];
 
 if (!$link) {
@@ -50,14 +48,10 @@ if (!$link) {
             $where=" WHERE email LIKE '%" . $mail . "%'";
         }
     }
-    //if ($phn=="") echo "Empty phone";
-   //echo $phn;
-    //echo $mail;
-   //echo $where;
-    //echo $phn;
-//echo "Соединение с MySQL установлено!" . PHP_EOL;
-//echo "Информация о сервере: " . mysqli_get_host_info($link) . PHP_EOL;
-$sql="SELECT id,name,phone,email,logined,if(logined=0,\"Offline\",\"Online\") as statusonline, logtime,carid,pic FROM sproviders ";
+
+$sql="SELECT id,name,phone,email,logined,if(logined=0,\"Offline\",\"Online\") as statusonline,
+ if(paymeapprove=0,\"Not approved\",\"Approved\") as paymestatus,
+ logtime,carid,pic FROM sproviders ";
 $orderby=" ORDER BY name ";
     //    echo $sql.$where.$orderby;
     $select=mysqli_query($link,$sql.$where.$orderby);
@@ -65,12 +59,16 @@ $orderby=" ORDER BY name ";
 calls.details, callstatus.statusname as Status
 FROM mobi1.users, calls, callstatus WHERE users.userid= calls.userid AND calls.status=callstatus.statusid;");*/
 ?>
+    <br>
+    <body>
+    <div id="wrapper">
     <table align="center" cellpadding="10" border="1" id="sp_table">
         <tr>
             <th>NAME</th>
             <th>PHONE</th>
             <th>E-mail</th>
             <th>Online status</th>
+            <th>PayMe status</th>
             <th>Time of Last Login</th>
             <th>Car's Plate</th>
             <!--<th>Details Request</th>
@@ -87,6 +85,7 @@ while ($row=mysqli_fetch_array($select))
             <td id="email_val<?php echo $row['id'];?>"><?php echo $row['email'];?></td>
             <td id="log_val<?php echo $row['id'];?>" style="display: none;"><?php echo $row['logined'];?></td>
             <td id="login_val<?php echo $row['id'];?>" onMouseOver="this.style.background='#FFCC33'" onMouseOut="this.style.backgroundColor='#F8E391'" onclick="changestatus_sp('<?php echo $row['id'];?>')"><?php echo $row['statusonline'];?></td>
+            <td id="paymestatus_val<?php echo $row['id'];?>"><?php echo $row['paymestatus'];?></td>
             <td id="logtime_val<?php echo $row['id'];?>"><?php echo $row['logtime'];?></td>
             <td id="car_val<?php echo $row['id'];?>"><?php echo $row['carid'];?></td>
             <td id="pic_val<?php echo $row['id'];?>" style="display: none;"><?php echo $row['pic'];?></td>
