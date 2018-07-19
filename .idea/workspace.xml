@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2d1fd3-5446-4625-912b-dda9162c9b96" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/insertseller.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/success.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payme.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insertseller.php" afterPath="$PROJECT_DIR$/insertseller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/options.ini" afterPath="$PROJECT_DIR$/options.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sps.php" afterPath="$PROJECT_DIR$/sps.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/st.css" afterPath="$PROJECT_DIR$/st.css" />
     </list>
     <ignored path="AdminModule.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +33,8 @@
       <file leaf-file-name="callssp.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/callssp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-72.3871">
+              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
               <folding>
                 <marker date="1519194362236" expanded="true" signature="415:425" placeholder="..." />
                 <marker date="1519194362236" expanded="true" signature="946:989" placeholder="SELECT statu..callstatus..." />
@@ -47,8 +48,8 @@
       <file leaf-file-name="calls.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calls.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.5161295">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <marker date="1519194362288" expanded="true" signature="415:425" placeholder="..." />
                 <marker date="1519194362288" expanded="true" signature="946:989" placeholder="SELECT calls..calls..." />
@@ -75,20 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="35.48387">
-              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="records.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/records.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-54.64516">
+            <state vertical-scroll-proportion="-0.06451613">
               <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <marker date="1519124061480" expanded="true" signature="587:680" placeholder="update sprov..." />
@@ -102,85 +93,87 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="st.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/st.css">
+      <file leaf-file-name="insertseller.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/insertseller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.935484">
-              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-              <folding />
+            <state vertical-scroll-proportion="0.6440129">
+              <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+              <folding>
+                <marker date="1531981774773" expanded="true" signature="1826:1929" placeholder="SELECT name ..sproviders..." />
+                <marker date="1531981774773" expanded="true" signature="2229:2262" placeholder="SELECT count..sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2434:2472" placeholder="SELECT ID, N..BANKS..." />
+                <marker date="1531981774773" expanded="true" signature="2664:2735" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:2827" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:2946" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3025" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3058" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3062" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3075" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3078" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3080" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3097" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3099" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3103" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3127" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3130" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3144" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3145" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3164" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3165" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3183" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3184" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3207" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3210" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3211" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3229" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3230" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3245" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3246" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3265" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3266" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3287" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3288" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3310" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3311" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3330" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3332" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3355" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3370" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3373" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="2664:3374" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="3405:4031" placeholder="UPDATE selle..." />
+                <marker date="1531981774773" expanded="true" signature="3411:4031" placeholder="INSERT INTO sellers..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4333" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4357" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4358" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4384" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4385" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4421" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4422" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4436" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4451" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4461" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4472" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4497" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4288:4498" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="4754:4790" placeholder="SELECT * FRO..paymesellers..." />
+                <marker date="1531981774773" expanded="true" signature="5344:5391" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="5344:5422" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="5344:5456" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="5344:5485" placeholder="UPDATE sprov..." />
+                <marker date="1531981774773" expanded="true" signature="6098:6112" placeholder="..." />
+                <marker date="1531981774773" expanded="true" signature="6159:6186" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insertseller.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/insertseller.php">
+      <file leaf-file-name="Admin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46601942">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-              <folding>
-                <marker date="1530806110592" expanded="true" signature="1560:1653" placeholder="SELECT name ..sproviders..." />
-                <marker date="1530806110592" expanded="true" signature="1917:1950" placeholder="SELECT count..sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2122:2160" placeholder="SELECT ID, N..BANKS..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2423" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2515" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2634" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2713" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2746" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2750" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2763" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2766" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2768" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2785" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2787" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2791" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2815" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2818" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2832" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2833" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2852" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2853" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2871" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2872" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2895" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2898" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2899" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2917" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2918" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2933" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2934" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2953" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2954" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2975" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2976" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2998" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:2999" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:3018" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:3020" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:3043" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:3058" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:3061" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="2352:3062" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="3093:3719" placeholder="UPDATE selle..." />
-                <marker date="1530806110592" expanded="true" signature="3099:3719" placeholder="INSERT INTO sellers..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3795" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3819" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3820" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3846" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3847" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3883" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3884" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3898" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3913" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3933" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="3766:3934" placeholder="UPDATE sprov..." />
-                <marker date="1530806110592" expanded="true" signature="4069:4083" placeholder="..." />
-                <marker date="1530806110592" expanded="true" signature="6342:6789" placeholder="..." />
-                <marker date="1530806110592" expanded="true" signature="6807:7230" placeholder="..." />
-                <marker date="1530806110592" expanded="true" signature="7252:7691" placeholder="..." />
-                <marker date="1530806110592" expanded="true" signature="7708:8137" placeholder="..." />
-                <marker date="1530806110592" expanded="true" signature="8657:9189" placeholder="..." />
-                <marker date="1530806110592" expanded="true" signature="9206:9483" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -188,8 +181,8 @@
       <file leaf-file-name="success.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/success.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.129032">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state vertical-scroll-proportion="4.967742">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding>
                 <marker date="1527254655657" expanded="true" signature="917:960" placeholder="SELECT first..payments..." />
                 <marker date="1527254655657" expanded="true" signature="1335:1350" placeholder="..." />
@@ -201,7 +194,7 @@
       <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3548387">
+            <state vertical-scroll-proportion="-19.870968">
               <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
               <folding>
                 <marker date="1518770845231" expanded="true" signature="340:350" placeholder="..." />
@@ -211,15 +204,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="payme.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/payme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="118" column="42" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
-              <folding>
-                <marker date="1518691343559" expanded="true" signature="1118:1201" placeholder="SELECT id fr..adminusers..." />
-                <marker date="1518691343559" expanded="true" signature="3079:3089" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-13.4838705">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -263,6 +253,8 @@
         <option value="$PROJECT_DIR$/success.php" />
         <option value="$PROJECT_DIR$/sps.php" />
         <option value="$PROJECT_DIR$/st.css" />
+        <option value="$PROJECT_DIR$/.idea/payme.php" />
+        <option value="$PROJECT_DIR$/payme.php" />
         <option value="$PROJECT_DIR$/insertseller.php" />
       </list>
     </option>
@@ -340,9 +332,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,8 +350,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,6 +382,11 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Private\MobiCar\AdminModule" />
+    </key>
   </component>
   <component name="RunManager" selected="PHP Built-in Web Server.Test">
     <configuration default="false" name="modify_records.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AdminModule/modify_records.php">
@@ -924,12 +935,13 @@
       <workItem from="1527249027680" duration="5247000" />
       <workItem from="1527767410531" duration="21842000" />
       <workItem from="1528368792040" duration="5164000" />
-      <workItem from="1530190971267" duration="22599000" />
+      <workItem from="1530190971267" duration="25534000" />
+      <workItem from="1531406760601" duration="36878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226921000" />
+    <option name="totallyTimeSpent" value="266734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -946,7 +958,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2546448" sideWeight="0.4953125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1002,24 +1014,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <marker date="1518770845231" expanded="true" signature="340:350" placeholder="..." />
-            <marker date="1518770845231" expanded="true" signature="2029:2166" placeholder="SELECT users..users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/callssp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1389,18 +1383,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1415,40 +1401,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/records.php">
+    <entry file="file://$PROJECT_DIR$/st.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-54.64516">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding>
-            <marker date="1519124061480" expanded="true" signature="587:680" placeholder="update sprov..." />
-            <marker date="1519124061480" expanded="true" signature="975:1091" placeholder="update users..." />
-            <marker date="1519124061480" expanded="true" signature="1277:1330" placeholder="update calls..." />
-            <marker date="1519124061480" expanded="true" signature="1467:1521" placeholder="update users..." />
-            <marker date="1519124061480" expanded="true" signature="1663:1718" placeholder="update sprov..." />
-            <marker date="1519124061480" expanded="true" signature="1983:2099" placeholder="update users..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users.php">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3548387">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding>
-            <marker date="1518770845231" expanded="true" signature="340:350" placeholder="..." />
-            <marker date="1518770845231" expanded="true" signature="2029:2166" placeholder="SELECT users..users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/success.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.129032">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <marker date="1527254655657" expanded="true" signature="917:960" placeholder="SELECT first..payments..." />
-            <marker date="1527254655657" expanded="true" signature="1335:1350" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-18.516129">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1466,8 +1431,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calls.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.5161295">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <marker date="1519194362288" expanded="true" signature="415:425" placeholder="..." />
             <marker date="1519194362288" expanded="true" signature="946:989" placeholder="SELECT calls..calls..." />
@@ -1479,10 +1444,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/callssp.php">
+    <entry file="file://$PROJECT_DIR$/Admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/records.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.06451613">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <marker date="1519124061480" expanded="true" signature="587:680" placeholder="update sprov..." />
+            <marker date="1519124061480" expanded="true" signature="975:1091" placeholder="update users..." />
+            <marker date="1519124061480" expanded="true" signature="1277:1330" placeholder="update calls..." />
+            <marker date="1519124061480" expanded="true" signature="1467:1521" placeholder="update users..." />
+            <marker date="1519124061480" expanded="true" signature="1663:1718" placeholder="update sprov..." />
+            <marker date="1519124061480" expanded="true" signature="1983:2099" placeholder="update users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/callssp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-72.3871">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
           <folding>
             <marker date="1519194362236" expanded="true" signature="415:425" placeholder="..." />
             <marker date="1519194362236" expanded="true" signature="946:989" placeholder="SELECT statu..callstatus..." />
@@ -1492,89 +1480,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/curl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.48387">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.07119741">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/st.css">
+    <entry file="file://$PROJECT_DIR$/success.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.935484">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state vertical-scroll-proportion="4.967742">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <marker date="1527254655657" expanded="true" signature="917:960" placeholder="SELECT first..payments..." />
+            <marker date="1527254655657" expanded="true" signature="1335:1350" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.870968">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+          <folding>
+            <marker date="1518770845231" expanded="true" signature="340:350" placeholder="..." />
+            <marker date="1518770845231" expanded="true" signature="2029:2166" placeholder="SELECT users..users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/payme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.4838705">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/insertseller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46601942">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6440129">
+          <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
           <folding>
-            <marker date="1530806110592" expanded="true" signature="1560:1653" placeholder="SELECT name ..sproviders..." />
-            <marker date="1530806110592" expanded="true" signature="1917:1950" placeholder="SELECT count..sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2122:2160" placeholder="SELECT ID, N..BANKS..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2423" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2515" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2634" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2713" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2746" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2750" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2763" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2766" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2768" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2785" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2787" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2791" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2815" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2818" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2832" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2833" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2852" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2853" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2871" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2872" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2895" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2898" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2899" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2917" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2918" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2933" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2934" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2953" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2954" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2975" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2976" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2998" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:2999" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:3018" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:3020" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:3043" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:3058" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:3061" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="2352:3062" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="3093:3719" placeholder="UPDATE selle..." />
-            <marker date="1530806110592" expanded="true" signature="3099:3719" placeholder="INSERT INTO sellers..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3795" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3819" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3820" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3846" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3847" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3883" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3884" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3898" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3913" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3933" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="3766:3934" placeholder="UPDATE sprov..." />
-            <marker date="1530806110592" expanded="true" signature="4069:4083" placeholder="..." />
-            <marker date="1530806110592" expanded="true" signature="6342:6789" placeholder="..." />
-            <marker date="1530806110592" expanded="true" signature="6807:7230" placeholder="..." />
-            <marker date="1530806110592" expanded="true" signature="7252:7691" placeholder="..." />
-            <marker date="1530806110592" expanded="true" signature="7708:8137" placeholder="..." />
-            <marker date="1530806110592" expanded="true" signature="8657:9189" placeholder="..." />
-            <marker date="1530806110592" expanded="true" signature="9206:9483" placeholder="..." />
+            <marker date="1531981774773" expanded="true" signature="1826:1929" placeholder="SELECT name ..sproviders..." />
+            <marker date="1531981774773" expanded="true" signature="2229:2262" placeholder="SELECT count..sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2434:2472" placeholder="SELECT ID, N..BANKS..." />
+            <marker date="1531981774773" expanded="true" signature="2664:2735" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:2827" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:2946" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3025" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3058" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3062" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3075" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3078" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3080" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3097" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3099" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3103" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3127" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3130" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3144" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3145" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3164" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3165" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3183" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3184" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3207" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3210" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3211" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3229" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3230" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3245" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3246" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3265" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3266" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3287" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3288" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3310" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3311" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3330" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3332" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3355" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3370" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3373" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="2664:3374" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="3405:4031" placeholder="UPDATE selle..." />
+            <marker date="1531981774773" expanded="true" signature="3411:4031" placeholder="INSERT INTO sellers..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4333" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4357" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4358" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4384" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4385" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4421" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4422" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4436" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4451" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4461" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4472" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4497" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4288:4498" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="4754:4790" placeholder="SELECT * FRO..paymesellers..." />
+            <marker date="1531981774773" expanded="true" signature="5344:5391" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="5344:5422" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="5344:5456" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="5344:5485" placeholder="UPDATE sprov..." />
+            <marker date="1531981774773" expanded="true" signature="6098:6112" placeholder="..." />
+            <marker date="1531981774773" expanded="true" signature="6159:6186" placeholder="..." />
           </folding>
         </state>
       </provider>
