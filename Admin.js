@@ -123,9 +123,15 @@ function save_row_sp(id)
 function search(type) {
     var email=document.getElementById("Email").value;
     var phone=document.getElementById("Phone").value;
-    //alert(email+"  "+phone);
+    var paymestatus=document.getElementById("paymestatus").value;
+
+    //alert(paymestatus);
     var crit1="";
     var crit2="";
+    var crit3="";
+    if (paymestatus>-1) {
+        crit3="&pstatus="+paymestatus;
+    }
     if (email.trim()!=="") {
         crit1 = "email="+email.trim();
     }
@@ -134,15 +140,19 @@ function search(type) {
     }
     if (crit1==="") {
         if (crit2!=="") {
-            document.location.assign("./"+type.trim()+".php?" + crit2 );
+            document.location.assign("./"+type.trim()+".php?" + crit2 + crit3 );
         } else {
-            document.location.assign("./"+type.trim()+".php" );
+            if (crit3 ==="") {
+                document.location.assign("./" + type.trim() + ".php");
+            } else {
+                document.location.assign("./" + type.trim() + ".php?"+ crit3.slice(1));
+            }
         }
     }  else {
         if (crit2!=="") {
-            document.location.assign("./"+type.trim()+".php?" + crit1+"&"+crit2);
+            document.location.assign("./"+type.trim()+".php?" + crit1+"&"+crit2 + crit3);
         } else {
-            document.location.assign("./"+type.trim()+".php?" + crit1);
+            document.location.assign("./"+type.trim()+".php?" + crit1 + crit3);
         }
     }
 }

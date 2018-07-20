@@ -30,7 +30,7 @@ if (!$link) {
     echo "Details of error: " . mysqli_connect_error() . PHP_EOL;
     exit;
 }
-$sql="SELECT phone,name,x,y FROM sproviders WHERE logined=1 AND busy=0 ORDER BY name ";
+$sql="SELECT phone,name,x,y FROM sproviders WHERE logined=1 AND busy=0 AND x is not null AND y is not null ORDER BY name ";
 //    echo $sql.$where.$orderby;
 $select=mysqli_query($link,$sql);
 ?>

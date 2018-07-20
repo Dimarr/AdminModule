@@ -12,18 +12,29 @@ if (!isset($_SESSION["is_auth"])){
     header("Location: ./index.php");
     exit;
 }
+$ini_array = parse_ini_file("options.ini");
+$link = mysqli_connect($ini_array["url"], $ini_array["user"], $ini_array["password"], $ini_array["database"]);
 ?>
 <link rel="stylesheet" href="./style.css" type="text/css"/>
 <input type="search" id="Phone" name="Phone" placeholder="Phone">
 <input type="search" id ="Email" name="Email" placeholder="Email">
+<select name="paymestatus" id ="paymestatus">
+    <option value="-1">Payme statuses</option>
+    <?php
+    $sqltatuses="SELECT ID, Name FROM paymeapprovestatus ORDER BY ID";
+    $select=mysqli_query($link,$sqltatuses);
+    while($rowpaymestatus = mysqli_fetch_array($select, MYSQLI_ASSOC)) {
+        echo "<option value='".$rowpaymestatus['ID']."'>".$rowpaymestatus['Name']."</option>";
+    }
+    ?>
+</select>
+
 <button type="submit" class="show_button" onclick="search('sps')">Search</button>
 <button type="submit" class="show_button" onclick="online_sps()">Show online SPs</button>
 <button type="submit" class="show_button" align="right" onclick="logout()">Logout</button>
 
 <?php
 //echo "eeee";
-$ini_array = parse_ini_file("options.ini");
-$link = mysqli_connect($ini_array["url"], $ini_array["user"], $ini_array["password"], $ini_array["database"]);
 echo "<div style=\"text-align:center;\"><b>  Market Fee value is ".$ini_array["marketfee"]." %</div>";
 //echo $_SERVER['DOCUMENT_ROOT'];
 
@@ -35,25 +46,27 @@ if (!$link) {
 }
     $mail=@$_GET['email'];
     $phn=@$_GET['phone'];
+    $pstatus=@$_GET['pstatus'];
     $where="";
     if ($mail=="") {
         //echo "Empty mail";
         if ($phn!="") {
-            $where=" WHERE phone LIKE '%" . $phn . "%'";
+            $where=" AND phone LIKE '%" . $phn . "%'";
         }
     } else {
         if ($phn!="") {
-            $where=" WHERE phone LIKE '%" . $phn . "%' AND Email LIKE '%" . $mail . "%'";
+            $where=" AND phone LIKE '%" . $phn . "%' AND Email LIKE '%" . $mail . "%'";
         } else {
-            $where=" WHERE email LIKE '%" . $mail . "%'";
+            $where=" AND email LIKE '%" . $mail . "%'";
         }
     }
+    if ($pstatus!="") $where.=" AND sproviders.paymeapprove=".$pstatus;
 
-$sql="SELECT id,name,phone,email,logined,if(logined=0,\"Offline\",\"Online\") as statusonline,
- if(paymeapprove=0,\"Not approved\",\"Approved\") as paymestatus,
- logtime,carid,pic FROM sproviders ";
-$orderby=" ORDER BY name ";
-    //    echo $sql.$where.$orderby;
+$sql="SELECT sproviders.id,sproviders.name,phone,email,logined,if(logined=0,\"Offline\",\"Online\") as statusonline,
+ paymeapprovestatus.name as paymestatus,
+ logtime,carid,pic FROM sproviders,paymeapprovestatus WHERE sproviders.paymeapprove=paymeapprovestatus.id ";
+$orderby=" ORDER BY sproviders.name ";
+        //echo $sql.$where.$orderby;
     $select=mysqli_query($link,$sql.$where.$orderby);
 /*$select=mysqli_query($link,"SELECT users.userid,firstname,lastname,phone,email,logined, logtime,carid ,
 calls.details, callstatus.statusname as Status
