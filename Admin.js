@@ -123,9 +123,10 @@ function save_row_sp(id)
 function search(type) {
     var email=document.getElementById("Email").value;
     var phone=document.getElementById("Phone").value;
-    var paymestatus=document.getElementById("paymestatus").value;
-
-    //alert(paymestatus);
+    if (type=='sps') {
+        var paymestatus = document.getElementById("paymestatus").value;
+    }
+    //alert('loikjjjiojioj');
     var crit1="";
     var crit2="";
     var crit3="";

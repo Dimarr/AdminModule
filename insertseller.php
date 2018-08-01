@@ -125,7 +125,7 @@ if($spid > 0)
         include "./payme.php";
         //echo "*".$alert."*";
         if ($status_code==0) {
-            $sql = "UPDATE sproviders SET paymeapprove=2, sellerid='".$bsellerid."',payme_secret='".$paymesellersecret."',payme_id='".$paymesellerid."' WHERE id=".$spid;
+            $sql = "UPDATE sproviders SET paymeapprove=1, sellerid='".$bsellerid."',payme_secret='".$paymesellersecret."',payme_id='".$paymesellerid."' WHERE id=".$spid;
             if (!mysqli_query($link,$sql)) {
                 //echo "sql ".$sql;
                 echo '<script language="javascript">';

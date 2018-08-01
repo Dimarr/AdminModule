@@ -60,14 +60,17 @@ if (!$link) {
             $where=" AND email LIKE '%" . $mail . "%'";
         }
     }
-    if ($pstatus!="") $where.=" AND sproviders.paymeapprove=".$pstatus;
+    if ($pstatus!="") $where.=" AND paymeapprove=".$pstatus;
 
-$sql="SELECT sproviders.id,sproviders.name,phone,email,logined,if(logined=0,\"Offline\",\"Online\") as statusonline,
+/*$sql="SELECT sproviders.id,sproviders.name,phone,email,logined,if(logined=0,\"Offline\",\"Online\") as statusonline,
  paymeapprovestatus.name as paymestatus,
- logtime,carid,pic FROM sproviders,paymeapprovestatus WHERE sproviders.paymeapprove=paymeapprovestatus.id ";
-$orderby=" ORDER BY sproviders.name ";
+ logtime,carid,pic FROM sproviders,paymeapprovestatus WHERE sproviders.paymeapprove=paymeapprovestatus.id "; */
+$orderby=" ORDER BY rating DESC ";
+
+$sql = "SELECT * FROM listspadmin WHERE 1=1";
         //echo $sql.$where.$orderby;
     $select=mysqli_query($link,$sql.$where.$orderby);
+//echo $sql.$where.$orderby;
 /*$select=mysqli_query($link,"SELECT users.userid,firstname,lastname,phone,email,logined, logtime,carid ,
 calls.details, callstatus.statusname as Status
 FROM mobi1.users, calls, callstatus WHERE users.userid= calls.userid AND calls.status=callstatus.statusid;");*/
@@ -84,6 +87,7 @@ FROM mobi1.users, calls, callstatus WHERE users.userid= calls.userid AND calls.s
             <th>PayMe status</th>
             <th>Time of Last Login</th>
             <th>Car's Plate</th>
+            <th>User's Rating</th>
             <!--<th>Details Request</th>
             <th>Status Request</th> -->
             <th></th>
@@ -101,6 +105,7 @@ while ($row=mysqli_fetch_array($select))
             <td id="paymestatus_val<?php echo $row['id'];?>"><?php echo $row['paymestatus'];?></td>
             <td id="logtime_val<?php echo $row['id'];?>"><?php echo $row['logtime'];?></td>
             <td id="car_val<?php echo $row['id'];?>"><?php echo $row['carid'];?></td>
+            <td id="rating<?php echo $row['id'];?>"><?php echo $row['rating'];?></td>
             <td id="pic_val<?php echo $row['id'];?>" style="display: none;"><?php echo $row['pic'];?></td>
             <td>
                 <input type='button' class="edit_button" id="edit_button<?php echo $row['id'];?>" value="edit" onclick="edit_row_sp('<?php echo $row['id'];?>');">
