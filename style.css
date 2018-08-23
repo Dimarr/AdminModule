@@ -1,6 +1,6 @@
 table {
 font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-font-size: 14px;
+font-size: 12px;
 border-radius: 10px;
 border-spacing: 0;
 text-align: center;
@@ -9,7 +9,7 @@ th {
 background: #BCEBDD;
 color: white;
 text-shadow: 0 1px 1px #2D2020;
-padding: 10px 20px;
+padding: 5px 5px;
 }
 th, td {
 border-style: solid;
@@ -27,7 +27,7 @@ border-top-right-radius: 10px;
 border-right: none;
 }
 td {
-padding: 10px 20px;
+padding: 5px 5px;
 background: #F8E391;
 }
 tr:last-child td:first-child {
@@ -48,7 +48,7 @@ border-right: none;
   cursor: pointer;
   border: 1px solid #bbb;
   overflow: visible;
-  font: bold 13px arial, helvetica, sans-serif;
+  font: bold 11px arial, helvetica, sans-serif;
   text-decoration: none;
   white-space: nowrap;
   color: #555;
@@ -86,7 +86,7 @@ border-right: none;
   cursor: pointer;
   border: 1px solid #bbb;
   overflow: visible;
-  font: bold 13px arial, helvetica, sans-serif;
+  font: bold 11px arial, helvetica, sans-serif;
   text-decoration: none;
   white-space: nowrap;
   color: #555;
@@ -124,7 +124,7 @@ border-right: none;
   cursor: pointer;
   border: 1px solid #bbb;
   overflow: visible;
-  font: bold 13px arial, helvetica, sans-serif;
+  font: bold 11px arial, helvetica, sans-serif;
   text-decoration: none;
   white-space: nowrap;
   color: #555;
@@ -266,3 +266,4 @@ input[type=radio] + label:before {
 input[type=radio]:checked + label:before {
   font-size: 14px;
 }
+

@@ -5,6 +5,7 @@
  * Date: 17.07.2018
  * Time: 13:16
  */
+//sale_price * (sale_installments - 1) * sale_discount_fee * (1 + sale_vat)
 $ini_array = parse_ini_file("options.ini");
 $paymeclient = $ini_array["paymeclient"];
 $marketfee= $ini_array["marketfee"];

@@ -195,8 +195,49 @@ function showpic_sp(pic) {
     }
 }
 
+function show_fees(id,amount,errortext) {
+   // var leftpos = window.event.clientX+50;
+        //document.getElementById("fee_button" + id).clientLeft+100;
+    //var toppos = window.event.clientY+50;
+    //document.getElementById("fee_button" + id).clientTop;
+    //alert(id);
+    //var w = window.open("./fees.php?saleid=" + id+ "#openModal", "Fee's details", "resizable=no,scrollbars=no,left="+leftpos+",top="+toppos+",width=420,height=230");
+    //alert(amount);
+    $.ajax
+    ({
+        type:'POST',
+        url:'./paymegetdata.php',
+        data:{
+            sale_id:id,
+            our_amount : amount,
+            err_text : errortext
+        },
+        success: function(result)  {
+            //alert(result);
+            //var w =showModalDialog("./fees.php?"+result);
+            var w = window.open("./fees.php?"+result,"Fees", "resizable=no,scrollbars=no,left=300,top=100,height=400,width=150");
+        /*    document.getElementById("log_val"+id).innerHTML=status;
+            if (status===1)
+            {
+                document.getElementById("login_val"+id).innerHTML="Online";
+            } else {
+                document.getElementById("login_val"+id).innerHTML="Offline";
+            }  */
+        }
+    });
+
+}
+
 function showcalls_sp(id) {
     var w = window.open("./callssp.php?row_id=" + id, "List of requests", "resizable=yes,scrollbars=yes");
+}
+
+function showpayments_sp(id) {
+    var w = window.open("./payments.php?sp=1&row_id=" + id, "List of payments", "resizable=yes,scrollbars=yes");
+}
+
+function showpayments_user(id) {
+    var w = window.open("./payments.php?sp=0&row_id=" + id, "List of payments", "resizable=yes,scrollbars=yes");
 }
 
 function online_sps() {

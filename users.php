@@ -101,6 +101,7 @@ while ($row=mysqli_fetch_array($select))
                 <input type='button' class="edit_button" id="edit_button<?php echo $row['userid'];?>" value="edit" onclick="edit_row('<?php echo $row['userid'];?>');">
                 <input type='button' class="save_button" style="display: none;" id="save_button<?php echo $row['userid'];?>" value="save" onclick="save_row('<?php echo $row['userid'];?>');">
                 <input type='button' class="show_button" id="show_button<?php echo $row['userid'];?>" value="calls" onclick="showcalls('<?php echo $row['userid'];?>');">
+                <input type='button' class="show_button" id="showp_buttonuser<?php echo $row['userid'];?>" value="payments" onclick="showpayments_user('<?php echo $row['userid'];?>');">
             </td>
         </tr>
         <?php
