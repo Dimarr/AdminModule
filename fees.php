@@ -9,6 +9,7 @@
 <?php
 //echo "eeee";
 $errcode     = @$_GET['errorcode'];
+$salepaymecode = @$_GET['salepaymecode'];
 $status      = @$_GET['salestatus'];
 $errmsg      = @$_GET['errormsg'];
 $mfee        = @$_GET['marketfee'];
@@ -28,6 +29,9 @@ if ($errcode=="20000") {
     <tr>
     <td>Sale status</td>
     <td><?php echo $status;?></td>
+    </tr><tr>
+    <td>Sale PayMe ID</td>
+    <td><?php echo $salepaymecode;?></td>
     </tr><tr>
     <td>Market Fee</td>
     <td><?php echo number_format($mfee/10000*$sprice, 2, '.', '')." ".$salecur;?></td>

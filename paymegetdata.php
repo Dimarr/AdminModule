@@ -88,6 +88,8 @@ function feedetail ($paymesaleid, $amount, $errtext) {
                                     break;
                                 //case "sale_price" :  $saleprice=$value_ob;
                                 //    break;
+                                case "sale_payme_code" : $salepaymecode = $value_ob;
+                                    break;
                                 case "sale_error_code" : $saleerrorcode = $value_ob;
                                     break;
                                 case "sale_error_text" : $errormsg = $value_ob;
@@ -140,7 +142,7 @@ function feedetail ($paymesaleid, $amount, $errtext) {
         echo "Calculated ".$final_format;*/
         $res="errorcode=".$saleerrorcode."&salestatus=".$salestatus."&vat=".$vat."&salecurrency=".$cur.
             "&marketfee=".$marketfee."&inst=".$inst."&discfee=".$discfee."&procfee=".$procfee.
-            "&proccharge=".$proccharge."&saleprice=".$saleprice."&errormsg=".$errormsg;
+            "&proccharge=".$proccharge."&saleprice=".$saleprice."&errormsg=".$errormsg."&salepaymecode=".$salepaymecode;
         if (!is_null($errtext)) $res.="&errtext=".$errtext;
         echo $res;
     }
