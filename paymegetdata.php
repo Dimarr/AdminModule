@@ -15,11 +15,12 @@ if(isset($_POST['sale_id'])) {
     $saleid=$_POST['sale_id'];
     $ouramount=$_POST['our_amount'];
     $errtext = $_POST['err_text'];
+    $slavecode = $_POST['slavecode'];
     //echo $errtext;
-    feedetail($saleid, $ouramount, $errtext);
+    feedetail($saleid, $ouramount, $errtext, $slavecode);
 }
 
-function feedetail ($paymesaleid, $amount, $errtext) {
+function feedetail ($paymesaleid, $amount, $errtext, $slavecode) {
     global $paymeclient;
     $jsonrequest = "{\r\n  \"payme_client_key\": \"".$paymeclient."\","
         ."\"sale_payme_id\": \"".$paymesaleid."\"}";
@@ -144,6 +145,7 @@ function feedetail ($paymesaleid, $amount, $errtext) {
             "&marketfee=".$marketfee."&inst=".$inst."&discfee=".$discfee."&procfee=".$procfee.
             "&proccharge=".$proccharge."&saleprice=".$saleprice."&errormsg=".$errormsg."&salepaymecode=".$salepaymecode;
         if (!is_null($errtext)) $res.="&errtext=".$errtext;
+        if (!is_null($slavecode)) $res.="&slavecode=".$slavecode;
         echo $res;
     }
 }

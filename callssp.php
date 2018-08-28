@@ -60,26 +60,28 @@ $title="Requests for ".$row['name'];
 ?>
 <title><?php echo $title ?></title>
 <?php
-$sql="SELECT calls.callid,cdate,details,callstatus.statusname,  calls.status as statusid, users.firstname, users.lastname ,users.phone , servicetype.name as service
+/*$sql="SELECT calls.callid,date_format(cdate,'%Y-%m-%d %H:%i') as cdate,details,callstatus.statusname,  calls.status as statusid, users.firstname, users.lastname ,users.phone , servicetype.name as service
 FROM mobi1.calls, users, servicetype, callstatus
-WHERE callstatus.statusid= calls.status AND calls.userid= users.userid AND servicetype.id=calls.serviceid AND calls.spid='$rowid'";
+WHERE callstatus.statusid= calls.status AND calls.userid= users.userid AND servicetype.id=calls.serviceid AND calls.spid='$rowid'"; */
+$sql="SELECT * from requestsuser WHERE spid=".$rowid;
 $select= mysqli_query($link,$sql);
 $where="";
 $orderby = " ORDER BY cdate DESC;";
 if ($status!="") {
- $where=" AND calls.status=".$status;
+ $where=" AND status=".$status;
 }
 if ($callid!="") {
- $where=" AND calls.callid=".$callid;
+ $where=" AND callid=".$callid;
 }
 
-//echo $sql.$where;
+//echo $sql.$where.$orderby;
 $select= mysqli_query($link,$sql.$where.$orderby);
 ?>
 <table align="center" cellpadding="10" border="1" id="user_table">
  <tr>
   <th>Request number</th>
   <th>Date of request</th>
+  <th>Rating</th>
   <th>Request details</th>
   <th>Status request</th>
   <th>Service</th>
@@ -95,16 +97,17 @@ $select= mysqli_query($link,$sql.$where.$orderby);
  <tr id="row<?php echo $row['callid'];?>">
   <td id="request_id<?php echo $row['callid'];?>"><?php echo $row['callid'];?></td>
   <td id="datereq_val<?php echo $row['callid'];?>"><?php echo $row['cdate'];?></td>
+  <td id="rating_val<?php echo $row['callid'];?>"><?php echo $row['rating'];?></td>
   <td id="detail_val<?php echo $row['callid'];?>"><?php echo $row['details'];?></td>
   <td id="status_val<?php echo $row['callid'];?>"><?php echo $row['statusname'];?></td>
   <td id="service_val<?php echo $row['callid'];?>"><?php echo $row['service'];?></td>
   <td id="fname_val<?php echo $row['callid'];?>"><?php echo $row['firstname'];?></td>
   <td id="lname_val<?php echo $row['callid'];?>"><?php echo $row['lastname'];?></td>
   <td id="phone_val<?php echo $row['callid'];?>"><?php echo $row['phone'];?></td>
-  <td id="statusid_val<?php echo $row['callid'];?>" style="display: none;"><?php echo $row['statusid'];?></td>
+  <td id="statusid_val<?php echo $row['callid'];?>" style="display: none;"><?php echo $row['status'];?></td>
   <td>
-   <input type='button' class="show_button" id="approve_button<?php echo $row['callid'];?>" value="Approve" onclick="appr_rej('<?php echo $row['callid'];?>','approve','<?php echo $row['statusid'];?>');">
-   <input type='button' class="show_button" id="reject_button<?php echo $row['callid'];?>" value="Reject" onclick="appr_rej('<?php echo $row['callid'];?>','reject','<?php echo $row['statusid'];?>');">
+   <input type='button' class="show_button" id="approve_button<?php echo $row['callid'];?>" value="Approve" onclick="appr_rej('<?php echo $row['callid'];?>','approve','<?php echo $row['status'];?>');">
+   <input type='button' class="show_button" id="reject_button<?php echo $row['callid'];?>" value="Reject" onclick="appr_rej('<?php echo $row['callid'];?>','reject','<?php echo $row['status'];?>');">
   </td>
 </tr>
   <?php

@@ -70,7 +70,7 @@ if ($sp==1) {
   <td id="amount_id<?php echo $i;?>"><?php echo $row['amount'];?></td>
   <td id="status_id<?php echo $i;?>"><?php echo $row['pstatus'];?></td>
   <td>
-  <input type='button' class="show_button" id="fee_button<?php echo $row['saleid'];?>" value="<?php echo ($row['pstatusid']<3) ? 'Fee\'s details' : 'Error detail' ?>" onclick="show_fees('<?php echo $row['saleid'];?>','<?php echo $row['amount'];?>','<?php echo $row['errortext'];?>');">
+  <input type='button' class="show_button" id="fee_button<?php echo $row['saleid'];?>" value="<?php echo ($row['pstatusid']<3) ? 'Fee\'s details' : 'Error detail' ?>" onclick="show_fees('<?php echo $row['saleid'];?>','<?php echo $row['amount'];?>','<?php echo $row['errortext'];?>','<?php echo $row['details']?>');">
   </td>
   </tr>
   <?php

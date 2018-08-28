@@ -195,7 +195,7 @@ function showpic_sp(pic) {
     }
 }
 
-function show_fees(id,amount,errortext) {
+function show_fees(id,amount,errortext, paymeslavecode) {
    // var leftpos = window.event.clientX+50;
         //document.getElementById("fee_button" + id).clientLeft+100;
     //var toppos = window.event.clientY+50;
@@ -210,7 +210,8 @@ function show_fees(id,amount,errortext) {
         data:{
             sale_id:id,
             our_amount : amount,
-            err_text : errortext
+            err_text : errortext,
+            slavecode : paymeslavecode
         },
         success: function(result)  {
             //alert(result);
@@ -229,7 +230,7 @@ function show_fees(id,amount,errortext) {
 }
 
 function showcalls_sp(id) {
-    var w = window.open("./callssp.php?row_id=" + id, "List of requests", "resizable=yes,scrollbars=yes");
+    var w = window.open("./callssp.php?row_id=" + id, "List of requests", "left=1,top=1,resizable=yes,scrollbars=yes");
 }
 
 function showpayments_sp(id) {
@@ -246,7 +247,7 @@ function online_sps() {
 
 function showcalls(id)
 {
-    var w=window.open("./calls.php?row_id="+id, "List of requests", "resizable=yes,scrollbars=yes");
+    var w=window.open("./calls.php?row_id="+id, "List of requests", "left=1,top=1,resizable=yes,scrollbars=yes");
     //w.focus();
     //w.document.write('<!DOCTYPE html><title>Calls</title><p>List of calls<button onclick="window.close();">Close</button>');
     //w.document.body.innerHTML="./calls.php"

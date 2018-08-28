@@ -21,6 +21,8 @@ $sprice      = @$_GET['saleprice'];
 $vat_        = @$_GET['vat'];
 $salecur     = @$_GET['salecurrency'];
 $errtext     = @$_GET['errtext'];
+$slavecode   = @$_GET['slavecode'];
+
 $finalprice = 0;
 //echo $errcode;
 if ($errcode=="20000") {
@@ -31,7 +33,14 @@ if ($errcode=="20000") {
     <td><?php echo $status;?></td>
     </tr><tr>
     <td>Sale PayMe ID</td>
-    <td><?php echo $salepaymecode;?></td>
+    <td><?php
+        echo $salepaymecode;
+        if (!is_null($slavecode))
+            if (!empty($slavecode)) {
+                echo ", ".$slavecode;
+            }
+        ?>
+    </td>
     </tr><tr>
     <td>Market Fee</td>
     <td><?php echo number_format($mfee/10000*$sprice, 2, '.', '')." ".$salecur;?></td>

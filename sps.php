@@ -88,7 +88,7 @@ FROM mobi1.users, calls, callstatus WHERE users.userid= calls.userid AND calls.s
             <th>Time of Last Login</th>
             <th>Car's Plate</th>
             <th>User's Rating</th>
-            <th>Votes</th>
+            <th>Reviews</th>
             <th>Points</th>
             <!--<th>Details Request</th>
             <th>Status Request</th> -->
@@ -105,7 +105,7 @@ while ($row=mysqli_fetch_array($select))
             <td id="log_val<?php echo $row['id'];?>" style="display: none;"><?php echo $row['logined'];?></td>
             <td id="login_val<?php echo $row['id'];?>" onMouseOver="this.style.background='#FFCC33'" onMouseOut="this.style.backgroundColor='#F8E391'" onclick="changestatus_sp('<?php echo $row['id'];?>')"><?php echo $row['statusonline'];?></td>
             <td id="paymestatus_val<?php echo $row['id'];?>"><?php echo $row['paymestatus'];?></td>
-            <td id="logtime_val<?php echo $row['id'];?>"><?php echo $row['logtime'];?></td>
+            <td id="logtime_val<?php echo $row['id'];?>"><?php echo$row['logtime'];?></td>
             <td id="car_val<?php echo $row['id'];?>"><?php echo $row['carid'];?></td>
             <td id="rating<?php echo $row['id'];?>"><?php echo $row['rating'];?></td>
             <td id="votes<?php echo $row['id'];?>"><?php echo $row['votes'];?></td>
