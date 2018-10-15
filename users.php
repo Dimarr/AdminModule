@@ -77,8 +77,8 @@ FROM mobi1.users, calls, callstatus WHERE users.userid= calls.userid AND calls.s
             <th>E-mail</th>
             <th>Online status</th>
             <th>Time of Last Login</th>
-            <th>Car's Plate</th>
-            <th>SP's Rating</th>
+            <th>Car Details</th>
+            <th>Total Rating</th>
             <!--<th>Details Request</th>
             <th>Status Request</th> -->
             <th></th>
@@ -95,11 +95,15 @@ while ($row=mysqli_fetch_array($select))
             <td id="log_val<?php echo $row['userid'];?>" style="display: none;"><?php echo $row['logined'];?></td>
             <td id="login_val<?php echo $row['userid'];?>" onMouseOver="this.style.background='#FFCC33'" onMouseOut="this.style.backgroundColor='#F8E391'" onclick="changestatus('<?php echo $row['userid'];?>')"><?php echo $row['statusonline'];?></td>
             <td id="logtime_val<?php echo $row['userid'];?>"><?php echo $row['logtime'];?></td>
-            <td id="car_val<?php echo $row['userid'];?>"><?php echo $row['carid'];?></td>
+            <td id="car_val<?php echo $row['userid'];?>"><?php echo $row['carid'];?><b><br>
+                    <?php echo $row['carbrand'].",".$row['carmodel'];?>
+                </b></td>
             <td id="rating<?php echo $row['userid'];?>"><?php echo $row['rating'];?></td>
+            <td id="car_plate<?php echo $row['userid'];?>" style="display: none;"><?php echo $row['carid'];?></td>
             <td>
                 <input type='button' class="edit_button" id="edit_button<?php echo $row['userid'];?>" value="edit" onclick="edit_row('<?php echo $row['userid'];?>');">
                 <input type='button' class="save_button" style="display: none;" id="save_button<?php echo $row['userid'];?>" value="save" onclick="save_row('<?php echo $row['userid'];?>');">
+                <input type='button' class="show_button" id="showcarpic_button<?php echo $row['userid'];?>" value="Car's pic" onclick="showcarpic_user('<?php echo $row['carpic'];?>');">
                 <input type='button' class="show_button" id="show_button<?php echo $row['userid'];?>" value="calls" onclick="showcalls('<?php echo $row['userid'];?>');">
                 <input type='button' class="show_button" id="showp_buttonuser<?php echo $row['userid'];?>" value="payments" onclick="showpayments_user('<?php echo $row['userid'];?>');">
             </td>

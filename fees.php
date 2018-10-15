@@ -43,7 +43,11 @@ if ($errcode=="20000") {
     </td>
     </tr><tr>
     <td>Market Fee</td>
-    <td><?php echo number_format($mfee/10000*$sprice, 2, '.', '')." ".$salecur;?></td>
+    <td><?php
+        if ($status=="completed") {
+            echo number_format($mfee / 10000 * $sprice, 2, '.', '') . " " . $salecur;
+        } else echo "No relevant";
+        ?></td>
     </tr><tr>
     <td>Number of installments</td>
     <td><?php echo $instl+1;?></td>

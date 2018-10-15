@@ -20,6 +20,68 @@ if(isset($_POST['sale_id'])) {
     feedetail($saleid, $ouramount, $errtext, $slavecode);
 }
 
+if(isset($_POST['payme_seller_id'])) {
+    //echo "ssfsffsfff";
+    $paymesellercode = $_POST['payme_seller_id'];
+    $sale_code = $_POST['sale_code'];
+    paymentsbysalecode($paymesellercode,$sale_code);
+}
+
+function paymentsbysalecode ($paymesellerid, $paymesale_code) {
+    global $paymeclient;
+
+    $jsonrequest = "{\r\n  \"payme_client_key\": \"".$paymeclient."\","
+        ."\"seller_payme_id\": \"".$paymesellerid."\"}";
+    global $ch1;
+    global $getsales;
+    $ch1 = curl_init();
+
+    curl_setopt($ch1, CURLOPT_URL, $getsales);
+    curl_setopt($ch1, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch1, CURLOPT_HEADER, FALSE);
+    curl_setopt($ch1, CURLOPT_HTTPHEADER, array(
+        "Content-Type: application/json"
+    ));
+    curl_setopt($ch1, CURLOPT_POST, TRUE);
+    //echo $jsonrequest;
+    curl_setopt($ch1, CURLOPT_POSTFIELDS, $jsonrequest);
+
+    $response = curl_exec($ch1);
+    curl_close($ch1);
+    if (!$response) {
+        return "An error occurred while getting data:".curl_error($ch1);
+    } else {
+        $res = "";
+        $obj = json_decode($response);
+        $flag = 0;
+        $paymesaleid ="";
+        foreach ($obj as $field => $value) {
+            if (is_array($value)) {
+                for ($i = 0; $i < count($value); $i++) {
+                    //а в нем у нас объекты
+                    foreach ($value[$i] as $field_ob => $value_ob) {
+                        if (!is_object($value_ob)) {
+                            switch ($field_ob) {
+                                case "sale_payme_code" : if (trim($paymesale_code) == trim($value_ob)) {
+                                    $flag = 1;
+                                } else $flag = 0;
+                                    break;
+                                case "sale_payme_id" : if ($flag==1) {
+                                    $paymesaleid = $value_ob;
+                                    break 3;
+                                }
+                            }
+                            //echo $field . ' -> ' . $field_ob . ' -> ' . $value_ob . '</br>';
+                        }
+                    }
+                }
+            }
+        }
+        //echo "code: ".$paymesale_code." Sale id: ".$paymesaleid;
+        echo $paymesaleid;
+    }
+}
+
 function feedetail ($paymesaleid, $amount, $errtext, $slavecode) {
     global $paymeclient;
     $jsonrequest = "{\r\n  \"payme_client_key\": \"".$paymeclient."\","

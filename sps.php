@@ -84,10 +84,11 @@ FROM mobi1.users, calls, callstatus WHERE users.userid= calls.userid AND calls.s
             <th>PHONE</th>
             <th>E-mail</th>
             <th>Online status</th>
+            <th>Busy status</th>
             <th>PayMe status</th>
             <th>Time of Last Login</th>
-            <th>Car's Plate</th>
-            <th>User's Rating</th>
+            <th>Car Details</th>
+            <th>Total Rating</th>
             <th>Reviews</th>
             <th>Points</th>
             <!--<th>Details Request</th>
@@ -103,20 +104,26 @@ while ($row=mysqli_fetch_array($select))
             <td id="phone_val<?php echo $row['id'];?>"><?php echo $row['phone'];?></td>
             <td id="email_val<?php echo $row['id'];?>"><?php echo $row['email'];?></td>
             <td id="log_val<?php echo $row['id'];?>" style="display: none;"><?php echo $row['logined'];?></td>
+            <td id="bus_val<?php echo $row['id'];?>" style="display: none;"><?php echo $row['busy'];?></td>
             <td id="login_val<?php echo $row['id'];?>" onMouseOver="this.style.background='#FFCC33'" onMouseOut="this.style.backgroundColor='#F8E391'" onclick="changestatus_sp('<?php echo $row['id'];?>')"><?php echo $row['statusonline'];?></td>
+            <td id="busy_val<?php echo $row['id'];?>" onMouseOver="this.style.background='#FFCC33'" onMouseOut="this.style.backgroundColor='#F8E391'" onclick="changebusystatus_sp('<?php echo $row['id'];?>')"><?php echo $row['busystatus'];?></td>
             <td id="paymestatus_val<?php echo $row['id'];?>"><?php echo $row['paymestatus'];?></td>
             <td id="logtime_val<?php echo $row['id'];?>"><?php echo$row['logtime'];?></td>
-            <td id="car_val<?php echo $row['id'];?>"><?php echo $row['carid'];?></td>
+            <td id="car_val<?php echo $row['id'];?>"><?php echo $row['carid'];?><b><br>
+                <?php echo $row['carbrand'].",".$row['carmodel'];?>
+                </b></td>
             <td id="rating<?php echo $row['id'];?>"><?php echo $row['rating'];?></td>
             <td id="votes<?php echo $row['id'];?>"><?php echo $row['votes'];?></td>
             <td id="points<?php echo $row['id'];?>"><?php echo $row['points'];?></td>
             <td id="pic_val<?php echo $row['id'];?>" style="display: none;"><?php echo $row['pic'];?></td>
-            <td width="25%">
+            <td id="car_plate<?php echo $row['id'];?>" style="display: none;"><?php echo $row['carid'];?></td>
+            <td width="20%">
                 <input type='button' class="edit_button" id="edit_button<?php echo $row['id'];?>" value="edit" onclick="edit_row_sp('<?php echo $row['id'];?>');">
                 <input type='button' class="save_button" style="display: none;" id="save_button<?php echo $row['id'];?>" value="save" onclick="save_row_sp('<?php echo $row['id'];?>');">
-                <input type='button' class="show_button" id="show_pic<?php echo $row['id'];?>" value="show pic" onclick="showpic_sp('<?php echo $row['pic'];?>');">
                 <input type='button' class="show_button" id="show_button<?php echo $row['id'];?>" value="calls" onclick="showcalls_sp('<?php echo $row['id'];?>');">
                 <input type='button' class="show_button" id="showp_button<?php echo $row['id'];?>" value="payments" onclick="showpayments_sp('<?php echo $row['id'];?>');">
+                <br><input type='button' class="show_button" id="show_pic<?php echo $row['id'];?>" value="show pic" onclick="showpic_sp('<?php echo $row['pic'];?>');">
+                <input type='button' class="show_button" id="showcarpic_button<?php echo $row['id'];?>" value="Car's pic" onclick="showcarpic_sp('<?php echo $row['carpic'];?>');">
             </td>
         </tr>
         <?php

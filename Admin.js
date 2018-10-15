@@ -7,7 +7,7 @@ function edit_row(id)
     var lname=document.getElementById("lname_val"+id).innerHTML;
     var phone=document.getElementById("phone_val"+id).innerHTML;
     var email=document.getElementById("email_val"+id).innerHTML;
-    var carplate=document.getElementById("car_val"+id).innerHTML;
+    var carplate=document.getElementById("car_plate"+id).innerHTML;
     //var detail=document.getElementById("detail_val"+id).innerHTML;
 
     //window.alert(fname);
@@ -21,31 +21,10 @@ function edit_row(id)
 
     document.getElementById("edit_button"+id).style.display="none";
     document.getElementById("show_button"+id).style.display="none";
+    document.getElementById("showcarpic_button"+id).style.display="none";
+    document.getElementById("showp_buttonuser"+id).style.display="none";
     document.getElementById("save_button"+id).style.display="inline";
 }
-
-function edit_row_sp(id)
-{
-    var name=document.getElementById("name_val"+id).innerHTML;
-    var phone=document.getElementById("phone_val"+id).innerHTML;
-    var email=document.getElementById("email_val"+id).innerHTML;
-    var carplate=document.getElementById("car_val"+id).innerHTML;
-    //var detail=document.getElementById("detail_val"+id).innerHTML;
-
-    //window.alert(fname);
-
-    document.getElementById("name_val"+id).innerHTML="<input type='text' id='name_text"+id+"' value='"+name+"'>";
-    document.getElementById("phone_val"+id).innerHTML="<input type='text' id='phone_text"+id+"' value='"+phone+"'>";
-    document.getElementById("email_val"+id).innerHTML="<input type='text' id='email_text"+id+"' value='"+email+"'>";
-    document.getElementById("car_val"+id).innerHTML="<input type='text' id='car_text"+id+"' value='"+carplate+"'>";
-    // document.getElementById("detail_val"+id).innerHTML="<input type='text' id='detail_text"+id+"' value='"+detail+"'>";
-
-    document.getElementById("edit_button"+id).style.display="none";
-    document.getElementById("show_button"+id).style.display="none";
-    document.getElementById("show_pic"+id).style.display="none";
-    document.getElementById("save_button"+id).style.display="inline";
-}
-
 
 function save_row(id)
 {
@@ -80,8 +59,35 @@ function save_row(id)
             document.getElementById("edit_button"+id).style.display="inline";
             document.getElementById("save_button"+id).style.display="none";
             document.getElementById("show_button"+id).style.display="inline";
+            document.getElementById("showp_buttonuser"+id).style.display="inline";
+            document.getElementById("showcarpic_button"+id).style.display="inline";
+            location.reload();
         }
     });
+}
+
+function edit_row_sp(id)
+{
+    var name=document.getElementById("name_val"+id).innerHTML;
+    var phone=document.getElementById("phone_val"+id).innerHTML;
+    var email=document.getElementById("email_val"+id).innerHTML;
+    var carplate=document.getElementById("car_plate"+id).innerHTML;
+    //var detail=document.getElementById("detail_val"+id).innerHTML;
+
+    //window.alert(fname);
+
+    document.getElementById("name_val"+id).innerHTML="<input type='text' id='name_text"+id+"' value='"+name+"'>";
+    document.getElementById("phone_val"+id).innerHTML="<input type='text' id='phone_text"+id+"' value='"+phone+"'>";
+    document.getElementById("email_val"+id).innerHTML="<input type='text' id='email_text"+id+"' value='"+email+"'>";
+    document.getElementById("car_val"+id).innerHTML="<input type='text' id='car_text"+id+"' value='"+carplate+"'>";
+    // document.getElementById("detail_val"+id).innerHTML="<input type='text' id='detail_text"+id+"' value='"+detail+"'>";
+
+    document.getElementById("edit_button"+id).style.display="none";
+    document.getElementById("show_button"+id).style.display="none";
+    document.getElementById("showp_button"+id).style.display="none";
+    document.getElementById("show_pic"+id).style.display="none";
+    document.getElementById("showcarpic_button"+id).style.display="none";
+    document.getElementById("save_button"+id).style.display="inline";
 }
 
 function save_row_sp(id)
@@ -91,7 +97,7 @@ function save_row_sp(id)
     var phone=document.getElementById("phone_text"+id).value;
     var car=document.getElementById("car_text"+id).value;
     //var detail=document.getElementById("detail_text"+id).value;
-
+    //alert(carbrand+","+carmodel)
     $.ajax
     ({
         type:"POST",
@@ -114,7 +120,10 @@ function save_row_sp(id)
             document.getElementById("edit_button"+id).style.display="inline";
             document.getElementById("save_button"+id).style.display="none";
             document.getElementById("show_button"+id).style.display="inline";
+            document.getElementById("showp_button"+id).style.display="inline";
             document.getElementById("show_pic"+id).style.display="inline";
+            document.getElementById("showcarpic_button"+id).style.display="inline";
+            location.reload();
         }
     });
 }
@@ -158,12 +167,20 @@ function search(type) {
     }
 }
 
-function appr_rej(id,type,currentst) {
+function appr_rej(id,type,currentst,spid) {
     var newst = 0;
     //alert(type +" "+currentst);
     if (currentst.trim()==="1" || currentst.trim()==="2" || currentst.trim()==="4") {
         if (type==="approve") {
-                newst = 10; // approve by CC
+                switch (currentst.trim()){
+                    case "1" : newst=2; // Accepted
+                        break;
+                    case "2" : newst=4; // Ask For payment
+                        break;
+                    case "4" : newst=10; // approve by CC
+                        break;
+                }
+                //newst = 10;
         } else {
                 newst = 7; //reject by CC
         }
@@ -178,13 +195,30 @@ function appr_rej(id,type,currentst) {
         data:{
             changestatuscall:'changestatuscall',
             row_id:id,
-            status:newst
+            status:newst,
+            spid : spid
         },
         success: function(result)  {
             if (newst>0) window.location.reload();
         }
     });
 
+}
+
+function showcarpic_user(pic) {
+    if (pic.trim().indexOf("://")>0) {
+        var w = window.open(pic, "Picture of user's car", "resizable=yes,scrollbars=yes");
+    } else {
+        alert("The picture was not uploaded");
+    }
+}
+
+function showcarpic_sp(pic) {
+    if (pic.trim().indexOf("://")>0) {
+        var w = window.open(pic, "Picture of user's car", "resizable=yes,scrollbars=yes");
+    } else {
+        alert("The picture was not uploaded");
+    }
 }
 
 function showpic_sp(pic) {
@@ -227,6 +261,41 @@ function show_fees(id,amount,errortext, paymeslavecode) {
         }
     });
 
+}
+
+function all_payments(sp,id) {
+    document.location.assign("./payments.php?sp="+sp.trim()+"&row_id="+id.trim());
+}
+
+function search_payments(paymeid) {
+    var saleid=document.getElementById("salecode").value;
+    //alert(saleid);
+    $.ajax
+    ({
+        type:'POST',
+        url:'./paymegetdata.php',
+        data:{
+            payme_seller_id:paymeid,
+            sale_code : saleid
+        },
+        success: function(result)  {
+            //alert(result);
+            if (result.trim()!=="") {
+                document.location.assign(document.location.href+"&saleid="+result.trim());
+            } else {
+                alert("Payment #"+saleid+" not found");
+            }
+            //var w =showModalDialog("./fees.php?"+result);
+            //var w = window.open("./fees.php?"+result,"Fees", "resizable=no,scrollbars=no,left=300,top=100,height=400,width=150");
+            /*    document.getElementById("log_val"+id).innerHTML=status;
+             if (status===1)
+             {
+             document.getElementById("login_val"+id).innerHTML="Online";
+             } else {
+             document.getElementById("login_val"+id).innerHTML="Offline";
+             }  */
+        }
+    });
 }
 
 function showcalls_sp(id) {
@@ -308,7 +377,7 @@ function changestatus_sp(id)
         type:'POST',
         url:'./records.php',
         data:{
-            changestatus:'changestatus_sp',
+            changestatussp:'changestatus_sp',
             row_id:id,
             status:status
         },
@@ -323,6 +392,32 @@ function changestatus_sp(id)
         }
     });
 }
+
+function changebusystatus_sp(id)
+{
+    var status=document.getElementById("bus_val"+id).innerHTML;
+    status=1-status;
+    $.ajax
+    ({
+        type:'POST',
+        url:'./records.php',
+        data:{
+            changebusystatussp:'changebusystatus_sp',
+            row_id:id,
+            status:status
+        },
+        success: function(result)  {
+            document.getElementById("bus_val"+id).innerHTML=status;
+            if (status===1)
+            {
+                document.getElementById("busy_val"+id).innerHTML="Busy";
+            } else {
+                document.getElementById("busy_val"+id).innerHTML="Available";
+            }
+        }
+    });
+}
+
 
 function comboInit(thelist)
 {

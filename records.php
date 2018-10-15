@@ -45,7 +45,20 @@ if(isset($_POST['changestatuscall']))
 {
  $row=$_POST['row_id'];
  $status=$_POST['status'];
- if ($status>0) mysqli_query($link,"update calls set status='$status' where callid='$row'");
+ $spid=@$_POST['spid'];
+ $saleid="";
+ if ($status>0) {
+   if ($status == 10) {
+      $sql = "SELECT payments.paymetrid
+              from calls, payments
+              where calls.status=4 and payments.callid=calls.callid and calls.callid=".$row;
+      $select= mysqli_query($link,$sql);
+      if ($res = mysqli_fetch_row($select)) $saleid = $res[0];
+      include "./approvepayment.php?saleid=".$saleid;
+   }
+   mysqli_query($link,"update calls set status='$status' where callid='$row'");
+   if ($status == 7) mysqli_query($link,"update sproviders set busy=0 where id='$spid'");
+ }
  exit;
 }
 
@@ -53,15 +66,27 @@ if(isset($_POST['changestatus']))
 {
  $row=$_POST['row_id'];
  $status=$_POST['status'];
- if ($status>0) mysqli_query($link,"update users set logined='$status' where userid='$row'");
+ //if ($status>0)
+  mysqli_query($link,"update users set logined='$status' where userid='$row'");
  exit();
 }
 
-if(isset($_POST['changestatus_sp']))
+if(isset($_POST['changestatussp']))
 {
  $row=$_POST['row_id'];
  $status=$_POST['status'];
- if ($status>0) mysqli_query($link,"update sproviders set logined='$status' where id='$row'");
+ //if ($status>0)
+ //echo "update sproviders set logined=".$status." where id=".$row;
+  mysqli_query($link,"update sproviders set logined=".$status." where id=".$row);
+ exit;
+}
+
+if(isset($_POST['changebusystatussp']))
+{
+ $row=$_POST['row_id'];
+ $status=$_POST['status'];
+ //if ($status>0)
+ mysqli_query($link,"update sproviders set busy='$status' where id='$row'");
  exit;
 }
 

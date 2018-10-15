@@ -6,6 +6,7 @@
 </head>
 <body>
 <link rel="stylesheet" href="./style.css" type="text/css"/>
+<input type="search" id="salecode" name="Salecode" placeholder="Payme Sale ID">
 <?php
 //echo "eeee";
 session_start();
@@ -17,7 +18,7 @@ if (!isset($_SESSION["is_auth"])){
 }
 
 $ini_array = parse_ini_file("options.ini");
-$link = mysqli_connect($ini_array["url"], $ini_array["user"], $ini_array["password"], $ini_array["database"]);
+$link= mysqli_connect($ini_array["url"], $ini_array["user"], $ini_array["password"], $ini_array["database"]);
 
 if (!$link) {
  echo "Error: Impossible connect to MySQL." . PHP_EOL;
@@ -28,18 +29,32 @@ if (!$link) {
 //echo  $_POST['showcalls'];
 //if(isset($_POST['showcalls']))
  //mysqli_close($link);
-$rowid=$_GET['row_id'];
-$sp=@$_GET['sp'];
+$rowid = @$_GET['row_id'];
+$sp    = @$_GET['sp'];
+$sale_id = isset($_GET['saleid']) ? trim($_GET['saleid']) : "";
 
-if ($sp==1) {
-    $sql = "SELECT * FROM listpaymentsadmin WHERE spid=" .$rowid." ORDER BY pdate";
-}
-else {
-    $sql = "SELECT * FROM listpaymentsadmin WHERE userid=" .$rowid." ORDER BY pdate";
+if ($sale_id=="") {
+    if ($sp == 1) {
+        $sql = "SELECT * FROM listpaymentsadmin WHERE spid=" . $rowid . " ORDER BY pdate";
+    } else {
+        $sql = "SELECT * FROM listpaymentsadmin WHERE userid=" . $rowid . " ORDER BY pdate";
+    }
+} else {
+    $sql = "SELECT * FROM listpaymentsadmin WHERE saleid='".$sale_id."' ORDER BY pdate";
 }
 //echo $sql;
 $select= mysqli_query($link,$sql);
+
+function selleridbySpID($row_id) {
+    $sql= "SELECT payme_id FROM sproviders WHERE id=".$row_id.";";
+    global $link;
+    $sel=mysqli_query($link,$sql);
+    return ($row = mysqli_fetch_row($sel)) ? $row[0] : "";
+}
 ?>
+<button type="submit" class="show_button" onclick="search_payments('<?php echo selleridbySpID($rowid);?>')">Search</button>
+<button type="submit" class="show_button" onclick="all_payments('<?php echo $sp;?>','<?php echo $rowid;?>')">All Payments</button>
+<br>
 <table align="left" cellpadding="10" border="1" id="user_table">
  <tr>
 <?php
@@ -70,7 +85,10 @@ if ($sp==1) {
   <td id="amount_id<?php echo $i;?>"><?php echo $row['amount'];?></td>
   <td id="status_id<?php echo $i;?>"><?php echo $row['pstatus'];?></td>
   <td>
-  <input type='button' class="show_button" id="fee_button<?php echo $row['saleid'];?>" value="<?php echo ($row['pstatusid']<3) ? 'Fee\'s details' : 'Error detail' ?>" onclick="show_fees('<?php echo $row['saleid'];?>','<?php echo $row['amount'];?>','<?php echo $row['errortext'];?>','<?php echo $row['details']?>');">
+  <input type='button' class="show_button" id="fee_button<?php echo $row['saleid'];?>" value="<?php
+  echo ($row['pstatusid']==2) ? 'Fee\'s details' : 'Error detail' ?>" onclick="show_fees('<?php echo $row['saleid'];?>',
+  '<?php echo $row['amount'];?>','<?php echo $row['errortext'];?>',
+  '<?php echo $row['details']?>');">
   </td>
   </tr>
   <?php
