@@ -117,7 +117,7 @@ while ($row=mysqli_fetch_array($select))
             <td id="points<?php echo $row['id'];?>"><?php echo $row['points'];?></td>
             <td id="pic_val<?php echo $row['id'];?>" style="display: none;"><?php echo $row['pic'];?></td>
             <td id="car_plate<?php echo $row['id'];?>" style="display: none;"><?php echo $row['carid'];?></td>
-            <td width="20%">
+            <td align="left" width="20%">
                 <input type='button' class="edit_button" id="edit_button<?php echo $row['id'];?>" value="edit" onclick="edit_row_sp('<?php echo $row['id'];?>');">
                 <input type='button' class="save_button" style="display: none;" id="save_button<?php echo $row['id'];?>" value="save" onclick="save_row_sp('<?php echo $row['id'];?>');">
                 <input type='button' class="show_button" id="show_button<?php echo $row['id'];?>" value="calls" onclick="showcalls_sp('<?php echo $row['id'];?>');">

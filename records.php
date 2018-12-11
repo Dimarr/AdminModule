@@ -35,7 +35,7 @@ if(isset($_POST['edit_row']))
  $phone=$_POST['phone_val'];
  $car=$_POST['car_val'];
 
- $sql="update users set firstname='$fname',lastname='$lname',email='$email',phone='$phone',carid='$car' where userid='$row'";
+ $sql="UPDATE users SET firstname='$fname',lastname='$lname',email='$email',phone='$phone',carid='$car' WHERE userid='$row'";
  mysqli_query($link,$sql);
  echo "success";
  exit();
@@ -43,21 +43,35 @@ if(isset($_POST['edit_row']))
 
 if(isset($_POST['changestatuscall']))
 {
+
  $row=$_POST['row_id'];
  $status=$_POST['status'];
  $spid=@$_POST['spid'];
  $saleid="";
+ $alert="";
  if ($status>0) {
    if ($status == 10) {
-      $sql = "SELECT payments.paymetrid
+     /* $sql = "SELECT payments.paymetrid
               from calls, payments
-              where calls.status=4 and payments.callid=calls.callid and calls.callid=".$row;
+              where calls.status=4 and payments.callid=calls.callid and calls.callid=".$row;  */
+      $sql = "SELECT paymetrid FROM payments WHERE callid=".$row;
       $select= mysqli_query($link,$sql);
       if ($res = mysqli_fetch_row($select)) $saleid = $res[0];
-      include "./approvepayment.php?saleid=".$saleid;
+       $resapprovement = approvepayment($saleid);
+       echo $resapprovement;
+       if ( $resapprovement == "Payment was approved successfully") {
+           mysqli_query($link,"UPDATE payments SET pstatus=2 WHERE paymetrid='".$saleid."'"); //Approvement of payment
+           mysqli_query($link,"UPDATE calls SET status='$status' WHERE callid='$row'");
+       }
    }
-   mysqli_query($link,"update calls set status='$status' where callid='$row'");
-   if ($status == 7) mysqli_query($link,"update sproviders set busy=0 where id='$spid'");
+   if ($status == 4 || $status == 7 || $status == 10) mysqli_query($link,"UPDATE sproviders SET busy=0 WHERE id='$spid'"); //Free SP after decline or approvement by CC
+   mysqli_query($link,"UPDATE calls SET status='$status' WHERE callid='$row'");
+   if ($status == 7) {
+       echo "Payment was rejected";
+   }
+   if ($status == 4) {
+       echo "Asked for Payment";
+   }
  }
  exit;
 }
@@ -121,5 +135,48 @@ if(isset($_POST['map']))
  );
   echo json_encode($arHash);
   exit;
+}
+function approvepayment($slid) {
+    $ini_array = parse_ini_file("options.ini");
+//$paymeclient = $ini_array["paymeclient"];
+    $capturesale = $ini_array["capturesale"];
+//$saleid = @$_GET['saleid'];
+//echo "eeeeee".$saleid."fffffffffff";
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $capturesale);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+    curl_setopt($ch, CURLOPT_POST, TRUE);
+
+    $jsonrequest = "{\r\n \"payme_sale_id\": \"".$slid."\"}";
+
+//echo $jsonrequest;
+
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonrequest);
+
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        "Content-Type: application/json"
+    ));
+
+    $response = curl_exec($ch);
+    if (!$response) {
+        $alert = "An error occurred while storing data:".curl_error($ch);
+    } else {
+        //var_dump($response);
+        $res= json_decode($response);
+        $status_code = $res->{'status_code'};
+        if ($res->{'status_code'}===0){
+            //$paymesellerid = $res->{'seller_payme_id'};
+            //$paymesellersecret = $res->{'seller_payme_secret'};
+            $alert = "Payment was approved successfully";
+        } else {
+            $alert= "An error occurred while payment proceeding: ".$res->{'status_error_details'};
+        }
+    };
+    curl_close($ch);
+    return $alert;
 }
 ?>

@@ -7,9 +7,10 @@
  */
 //sale_price * (sale_installments - 1) * sale_discount_fee * (1 + sale_vat)
 $ini_array = parse_ini_file("options.ini");
-$paymeclient = $ini_array["paymeclient"];
+//$paymeclient = $ini_array["paymeclient"];
 $capturesale = $ini_array["capturesale"];
-$saleid = @$_GET['saleid'];
+//$saleid = @$_GET['saleid'];
+//echo "eeeeee".$saleid."fffffffffff";
 
 $ch = curl_init();
 
@@ -19,7 +20,7 @@ curl_setopt($ch, CURLOPT_HEADER, FALSE);
 
 curl_setopt($ch, CURLOPT_POST, TRUE);
 
-$jsonrequest = "{\r\n  \"payme_client_key\": \"".$paymeclient."\",\"payme_sale_id\":".$saleid."\"}";
+$jsonrequest = "{\r\n \"payme_sale_id\":".$saleid."\"}";
 
 //echo $jsonrequest;
 
@@ -39,11 +40,11 @@ if (!$response) {
     if ($res->{'status_code'}===0){
         //$paymesellerid = $res->{'seller_payme_id'};
         //$paymesellersecret = $res->{'seller_payme_secret'};
-        $alert = "";
+        $alert = "Payment was approved successfully";
     } else {
         $alert= "An error occurred while payment proceeding: ".$res->{'status_error_details'};
     }
 };
 curl_close($ch);
-echo $alert;
+//echo $alert;
 ?>

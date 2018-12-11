@@ -107,8 +107,8 @@ $select= mysqli_query($link,$sql.$where.$orderby);
   <td id="statusid_val<?php echo $row['callid'];?>" style="display: none;"><?php echo $row['status'];?></td>
   <td>
    <input type='button' class="show_button" id="approve_button<?php echo $row['callid'];?>" value="Approve"
-          onclick="appr_rej('<?php echo $row['callid'];?>','approve','<?php echo $row['status'];?>');">
-   <input type='button' class="show_button" id="reject_button<?php echo $row['callid'];?>" value="Reject" onclick="appr_rej('<?php echo $row['callid'];?>','reject','<?php echo $row['status'];?>');">
+          onclick="appr_rej('<?php echo $row['callid'];?>','approve','<?php echo $row['status'];?>','<?php echo $rowid;?>');">
+   <input type='button' class="show_button" id="reject_button<?php echo $row['callid'];?>" value="Reject" onclick="appr_rej('<?php echo $row['callid'];?>','reject','<?php echo $row['status'];?>','<?php echo $rowid;?>');">
   </td>
 </tr>
   <?php

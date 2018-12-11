@@ -175,7 +175,7 @@ function appr_rej(id,type,currentst,spid) {
                 switch (currentst.trim()){
                     case "1" : newst=2; // Accepted
                         break;
-                    case "2" : newst=4; // Ask For payment
+                    case "2" : newst=10; // approve by CC
                         break;
                     case "4" : newst=10; // approve by CC
                         break;
@@ -199,6 +199,9 @@ function appr_rej(id,type,currentst,spid) {
             spid : spid
         },
         success: function(result)  {
+            if (result.trim() != '') {
+                alert(result);
+            }
             if (newst>0) window.location.reload();
         }
     });

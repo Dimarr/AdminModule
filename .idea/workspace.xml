@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2d1fd3-5446-4625-912b-dda9162c9b96" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/approvepayment.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin.js" afterPath="$PROJECT_DIR$/Admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calls.php" afterPath="$PROJECT_DIR$/calls.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/approvepayment.php" afterPath="$PROJECT_DIR$/approvepayment.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/callssp.php" afterPath="$PROJECT_DIR$/callssp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fees.php" afterPath="$PROJECT_DIR$/fees.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/options.ini" afterPath="$PROJECT_DIR$/options.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paymegetdata.php" afterPath="$PROJECT_DIR$/paymegetdata.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payments.php" afterPath="$PROJECT_DIR$/payments.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/records.php" afterPath="$PROJECT_DIR$/records.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sps.php" afterPath="$PROJECT_DIR$/sps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users.php" afterPath="$PROJECT_DIR$/users.php" />
     </list>
     <ignored path="AdminModule.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,24 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="paymegetdata.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paymegetdata.php">
+      <file leaf-file-name="payme.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/payme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7096774">
-              <caret line="173" column="32" selection-start-line="173" selection-start-column="32" selection-end-line="173" selection-end-column="32" />
-              <folding>
-                <element signature="e#7054#7092#0#PHP" expanded="false" />
-                <element signature="e#7819#8362#0#PHP" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-11.354838">
+              <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Admin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69058293">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,8 +53,8 @@
       <file leaf-file-name="calls.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calls.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="107" column="118" selection-start-line="107" selection-start-column="118" selection-end-line="107" selection-end-column="118" />
+            <state vertical-scroll-proportion="-11.645162">
+              <caret line="106" column="118" selection-start-line="106" selection-start-column="118" selection-end-line="106" selection-end-column="118" />
               <folding>
                 <marker date="1536216651420" expanded="true" signature="415:425" placeholder="..." />
                 <marker date="1536216651420" expanded="true" signature="946:989" placeholder="SELECT calls..calls..." />
@@ -77,26 +68,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="records.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="records.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/records.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.62068963">
+              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
               <folding>
-                <marker date="1538493128910" expanded="true" signature="587:680" placeholder="update sprov..." />
-                <marker date="1538493128910" expanded="true" signature="975:1091" placeholder="update users..." />
-                <marker date="1538493128910" expanded="true" signature="1334:1480" placeholder="SELECT payme..calls..." />
-                <marker date="1538493128910" expanded="true" signature="1674:1727" placeholder="update calls..." />
-                <marker date="1538493128910" expanded="true" signature="1772:1817" placeholder="update users..." />
-                <marker date="1538493128910" expanded="true" signature="1961:2015" placeholder="update users..." />
-                <marker date="1538493128910" expanded="true" signature="2147:2198" placeholder="update sprov..." />
-                <marker date="1538493128910" expanded="true" signature="2228:2258" placeholder="update sprov..." />
-                <marker date="1538493128910" expanded="true" signature="2228:2279" placeholder="update sprov..." />
-                <marker date="1538493128910" expanded="true" signature="2228:2285" placeholder="update sprov..." />
-                <marker date="1538493128910" expanded="true" signature="2228:2286" placeholder="update sprov..." />
-                <marker date="1538493128910" expanded="true" signature="2228:2293" placeholder="update sprov..." />
-                <marker date="1538493128910" expanded="true" signature="2430:2482" placeholder="update sprov..." />
-                <marker date="1538493128910" expanded="true" signature="2747:2863" placeholder="update users..." />
+                <marker date="1544518479072" expanded="true" signature="587:680" placeholder="update sprov..." />
+                <marker date="1544518479072" expanded="true" signature="975:1091" placeholder="UPDATE users..." />
+                <marker date="1544518479072" expanded="true" signature="981:1091" placeholder="update users..." />
+                <marker date="1544518479072" expanded="true" signature="1349:1495" placeholder="SELECT payme..calls..." />
+                <marker date="1544518479072" expanded="true" signature="1521:1565" placeholder="SELECT payme..payments..." />
+                <marker date="1544518479072" expanded="true" signature="1863:1904" placeholder="update payme..." />
+                <marker date="1544518479072" expanded="true" signature="1863:1916" placeholder="update payme..." />
+                <marker date="1544518479072" expanded="true" signature="1863:1917" placeholder="update payme..." />
+                <marker date="1544518479072" expanded="true" signature="1863:2042" placeholder="update payme..." />
+                <marker date="1544518479072" expanded="true" signature="1976:2029" placeholder="UPDATE calls..." />
+                <marker date="1544518479072" expanded="true" signature="1982:2029" placeholder="update calls..." />
+                <marker date="1544518479072" expanded="true" signature="2121:2166" placeholder="UPDATE sprov..." />
+                <marker date="1544518479072" expanded="true" signature="2127:2166" placeholder="update users..." />
+                <marker date="1544518479072" expanded="true" signature="2238:2291" placeholder="UPDATE calls..." />
+                <marker date="1544518479072" expanded="true" signature="2560:2614" placeholder="update users..." />
+                <marker date="1544518479072" expanded="true" signature="2746:2797" placeholder="update sprov..." />
+                <marker date="1544518479072" expanded="true" signature="2827:2857" placeholder="update sprov..." />
+                <marker date="1544518479072" expanded="true" signature="2827:2878" placeholder="update sprov..." />
+                <marker date="1544518479072" expanded="true" signature="2827:2884" placeholder="update sprov..." />
+                <marker date="1544518479072" expanded="true" signature="2827:2885" placeholder="update sprov..." />
+                <marker date="1544518479072" expanded="true" signature="2827:2892" placeholder="update sprov..." />
+                <marker date="1544518479072" expanded="true" signature="3029:3081" placeholder="update sprov..." />
+                <marker date="1544518479072" expanded="true" signature="3346:3462" placeholder="update users..." />
               </folding>
             </state>
           </provider>
@@ -105,17 +105,17 @@
       <file leaf-file-name="sps.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sps.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.645162">
-              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.935484">
+              <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
               <folding>
-                <marker date="1539591563328" expanded="true" signature="340:350" placeholder="..." />
-                <marker date="1539591563328" expanded="true" signature="926:977" placeholder="SELECT ID, N..paymeapprovestatus..." />
-                <marker date="1539591563328" expanded="true" signature="1521:1539" placeholder="..." />
-                <marker date="1539591563328" expanded="true" signature="2373:2559" placeholder="SELECT id,na..sproviders..." />
-                <marker date="1539591563328" expanded="true" signature="2373:2630" placeholder="SELECT sprov..sproviders..." />
-                <marker date="1539591563328" expanded="true" signature="2373:2631" placeholder="SELECT sprov..sproviders..." />
-                <marker date="1539591563328" expanded="true" signature="2681:2706" placeholder="SELECT * FRO..listspadmin..." />
-                <marker date="1539591563328" expanded="true" signature="2681:2716" placeholder="SELECT * FRO..listspadmin..." />
+                <marker date="1544449590552" expanded="true" signature="340:350" placeholder="..." />
+                <marker date="1544449590552" expanded="true" signature="926:977" placeholder="SELECT ID, N..paymeapprovestatus..." />
+                <marker date="1544449590552" expanded="true" signature="1521:1539" placeholder="..." />
+                <marker date="1544449590552" expanded="true" signature="2373:2559" placeholder="SELECT id,na..sproviders..." />
+                <marker date="1544449590552" expanded="true" signature="2373:2630" placeholder="SELECT sprov..sproviders..." />
+                <marker date="1544449590552" expanded="true" signature="2373:2631" placeholder="SELECT sprov..sproviders..." />
+                <marker date="1544449590552" expanded="true" signature="2681:2706" placeholder="SELECT * FRO..listspadmin..." />
+                <marker date="1544449590552" expanded="true" signature="2681:2716" placeholder="SELECT * FRO..listspadmin..." />
               </folding>
             </state>
           </provider>
@@ -124,7 +124,7 @@
       <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.225806">
+            <state vertical-scroll-proportion="-28.67742">
               <caret line="98" column="71" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="71" />
               <folding>
                 <marker date="1539591563348" expanded="true" signature="340:350" placeholder="..." />
@@ -135,13 +135,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fees.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fees.php">
+      <file leaf-file-name="insertseller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insertseller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            <state vertical-scroll-proportion="-6.83871">
+              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
               <folding>
-                <marker date="1535962172355" expanded="true" signature="1994:2068" placeholder="..." />
+                <marker date="1532517435738" expanded="true" signature="1826:1929" placeholder="SELECT name,..sproviders..." />
+                <marker date="1532517435738" expanded="true" signature="2229:2262" placeholder="SELECT * FRO..sellers..." />
+                <marker date="1532517435738" expanded="true" signature="2434:2472" placeholder="SELECT ID, N..banks..." />
+                <marker date="1532517435738" expanded="true" signature="2664:3373" placeholder="INSERT INTO sellers..." />
+                <marker date="1532517435738" expanded="true" signature="4288:4497" placeholder="UPDATE sprov..." />
+                <marker date="1532517435738" expanded="true" signature="4754:4790" placeholder="SELECT * FRO..paymesellers..." />
+                <marker date="1532517435738" expanded="true" signature="5344:5485" placeholder="UPDATE sprov..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="callssp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/callssp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.935484">
+              <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
+              <folding>
+                <marker date="1544107552747" expanded="true" signature="415:425" placeholder="..." />
+                <marker date="1544107552747" expanded="true" signature="946:989" placeholder="SELECT statu..callstatus..." />
+                <marker date="1544107552747" expanded="true" signature="1829:1866" placeholder="SELECT name ..sproviders..." />
+                <marker date="1544107552747" expanded="true" signature="2035:2411" placeholder="SELECT calls..calls..." />
+                <marker date="1544107552747" expanded="true" signature="2423:2461" placeholder="SELECT * fro..Requests..." />
               </folding>
             </state>
           </provider>
@@ -150,8 +172,8 @@
       <file leaf-file-name="payments.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/payments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+            <state vertical-scroll-proportion="-13.4838705">
+              <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
               <folding>
                 <marker date="1536157008222" expanded="true" signature="555:565" placeholder="..." />
                 <marker date="1536157008222" expanded="true" signature="1272:1315" placeholder="SELECT * FRO..listpaymentsadmin..." />
@@ -166,32 +188,6 @@
                 <marker date="1536157008222" expanded="true" signature="1480:1555" placeholder="SELECT * FRO..listpaymentsadmin..." />
                 <marker date="1536157008222" expanded="true" signature="1654:1695" placeholder="SELECT payme..payments..." />
                 <marker date="1536157008222" expanded="true" signature="2156:2332" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="approvepayment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/approvepayment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="callssp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/callssp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
-              <folding>
-                <marker date="1537523409901" expanded="true" signature="415:425" placeholder="..." />
-                <marker date="1537523409901" expanded="true" signature="946:989" placeholder="SELECT statu..callstatus..." />
-                <marker date="1537523409901" expanded="true" signature="1829:1866" placeholder="SELECT name ..sproviders..." />
-                <marker date="1537523409901" expanded="true" signature="2035:2411" placeholder="SELECT calls..calls..." />
-                <marker date="1537523409901" expanded="true" signature="2423:2461" placeholder="SELECT * fro..Requests..." />
               </folding>
             </state>
           </provider>
@@ -240,11 +236,12 @@
         <option value="$PROJECT_DIR$/payments.php" />
         <option value="$PROJECT_DIR$/calls.php" />
         <option value="$PROJECT_DIR$/options.ini" />
-        <option value="$PROJECT_DIR$/callssp.php" />
-        <option value="$PROJECT_DIR$/approvepayment.php" />
-        <option value="$PROJECT_DIR$/records.php" />
-        <option value="$PROJECT_DIR$/sps.php" />
         <option value="$PROJECT_DIR$/users.php" />
+        <option value="$PROJECT_DIR$/callssp.php" />
+        <option value="$PROJECT_DIR$/a.php" />
+        <option value="$PROJECT_DIR$/approvepayment.php" />
+        <option value="$PROJECT_DIR$/sps.php" />
+        <option value="$PROJECT_DIR$/records.php" />
         <option value="$PROJECT_DIR$/Admin.js" />
       </list>
     </option>
@@ -323,6 +320,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -357,8 +356,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,6 +562,26 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdminModule" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -729,6 +746,52 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdminModule" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdminModule" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdminModule" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -817,6 +880,116 @@
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdminModule" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdminModule" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdminModule" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdminModule" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdminModule" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="Test" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" router_script="$PROJECT_DIR$/index.html">
@@ -939,14 +1112,16 @@
       <workItem from="1537427671816" duration="15747000" />
       <workItem from="1538482336557" duration="6166000" />
       <workItem from="1539587224896" duration="5443000" />
+      <workItem from="1544015629604" duration="1676000" />
+      <workItem from="1544083387616" duration="35852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482091000" />
+    <option name="totallyTimeSpent" value="519619000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="2" width="1934" height="1036" extended-state="1" />
+    <frame x="-8" y="2" width="1934" height="1036" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1043,13 +1218,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/calls.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1078,14 +1246,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1539591563328" expanded="true" signature="340:350" placeholder="..." />
-            <marker date="1539591563328" expanded="true" signature="926:977" placeholder="SELECT ID, N..paymeapprovestatus..." />
-            <marker date="1539591563328" expanded="true" signature="1521:1539" placeholder="..." />
-            <marker date="1539591563328" expanded="true" signature="2373:2559" placeholder="SELECT id,na..sproviders..." />
-            <marker date="1539591563328" expanded="true" signature="2373:2630" placeholder="SELECT sprov..sproviders..." />
-            <marker date="1539591563328" expanded="true" signature="2373:2631" placeholder="SELECT sprov..sproviders..." />
-            <marker date="1539591563328" expanded="true" signature="2681:2706" placeholder="SELECT * FRO..listspadmin..." />
-            <marker date="1539591563328" expanded="true" signature="2681:2716" placeholder="SELECT * FRO..listspadmin..." />
+            <marker date="1544449590552" expanded="true" signature="340:350" placeholder="..." />
+            <marker date="1544449590552" expanded="true" signature="926:977" placeholder="SELECT ID, N..paymeapprovestatus..." />
+            <marker date="1544449590552" expanded="true" signature="1521:1539" placeholder="..." />
+            <marker date="1544449590552" expanded="true" signature="2373:2559" placeholder="SELECT id,na..sproviders..." />
+            <marker date="1544449590552" expanded="true" signature="2373:2630" placeholder="SELECT sprov..sproviders..." />
+            <marker date="1544449590552" expanded="true" signature="2373:2631" placeholder="SELECT sprov..sproviders..." />
+            <marker date="1544449590552" expanded="true" signature="2681:2706" placeholder="SELECT * FRO..listspadmin..." />
+            <marker date="1544449590552" expanded="true" signature="2681:2716" placeholder="SELECT * FRO..listspadmin..." />
           </folding>
         </state>
       </provider>
@@ -1262,13 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/curl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07119741">
@@ -1332,20 +1493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/insertseller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="61.48387">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/secret.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1367,10 +1514,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/payme.php">
+    <entry file="file://$PROJECT_DIR$/success.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.24722663">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1384,18 +1531,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/approvepayment.php">
+    <entry file="file://$PROJECT_DIR$/paymegetdata.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.741936">
+          <caret line="173" column="32" selection-start-line="173" selection-start-column="32" selection-end-line="173" selection-end-column="32" />
+          <folding>
+            <element signature="e#7054#7092#0#PHP" expanded="false" />
+            <element signature="e#7819#8362#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/secret.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1518336408000" expanded="true" signature="283:320" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/payme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.354838">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insertseller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.83871">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <marker date="1532517435738" expanded="true" signature="1826:1929" placeholder="SELECT name,..sproviders..." />
+            <marker date="1532517435738" expanded="true" signature="2229:2262" placeholder="SELECT * FRO..sellers..." />
+            <marker date="1532517435738" expanded="true" signature="2434:2472" placeholder="SELECT ID, N..banks..." />
+            <marker date="1532517435738" expanded="true" signature="2664:3373" placeholder="INSERT INTO sellers..." />
+            <marker date="1532517435738" expanded="true" signature="4288:4497" placeholder="UPDATE sprov..." />
+            <marker date="1532517435738" expanded="true" signature="4754:4790" placeholder="SELECT * FRO..paymesellers..." />
+            <marker date="1532517435738" expanded="true" signature="5344:5485" placeholder="UPDATE sprov..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/callssp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.935484">
+          <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
+          <folding>
+            <marker date="1544107552747" expanded="true" signature="415:425" placeholder="..." />
+            <marker date="1544107552747" expanded="true" signature="946:989" placeholder="SELECT statu..callstatus..." />
+            <marker date="1544107552747" expanded="true" signature="1829:1866" placeholder="SELECT name ..sproviders..." />
+            <marker date="1544107552747" expanded="true" signature="2035:2411" placeholder="SELECT calls..calls..." />
+            <marker date="1544107552747" expanded="true" signature="2423:2461" placeholder="SELECT * fro..Requests..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/payments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        <state vertical-scroll-proportion="-13.4838705">
+          <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
           <folding>
             <marker date="1536157008222" expanded="true" signature="555:565" placeholder="..." />
             <marker date="1536157008222" expanded="true" signature="1272:1315" placeholder="SELECT * FRO..listpaymentsadmin..." />
@@ -1414,24 +1620,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/callssp.php">
+    <entry file="file://$PROJECT_DIR$/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+        <state vertical-scroll-proportion="-28.67742">
+          <caret line="98" column="71" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="71" />
           <folding>
-            <marker date="1537523409901" expanded="true" signature="415:425" placeholder="..." />
-            <marker date="1537523409901" expanded="true" signature="946:989" placeholder="SELECT statu..callstatus..." />
-            <marker date="1537523409901" expanded="true" signature="1829:1866" placeholder="SELECT name ..sproviders..." />
-            <marker date="1537523409901" expanded="true" signature="2035:2411" placeholder="SELECT calls..calls..." />
-            <marker date="1537523409901" expanded="true" signature="2423:2461" placeholder="SELECT * fro..Requests..." />
+            <marker date="1539591563348" expanded="true" signature="340:350" placeholder="..." />
+            <marker date="1539591563348" expanded="true" signature="2057:2194" placeholder="SELECT users..users..." />
+            <marker date="1539591563348" expanded="true" signature="2206:2234" placeholder="SELECT * FRO..listusersadmin..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/calls.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="118" selection-start-line="107" selection-start-column="118" selection-end-line="107" selection-end-column="118" />
+        <state vertical-scroll-proportion="-11.645162">
+          <caret line="106" column="118" selection-start-line="106" selection-start-column="118" selection-end-line="106" selection-end-column="118" />
           <folding>
             <marker date="1536216651420" expanded="true" signature="415:425" placeholder="..." />
             <marker date="1536216651420" expanded="true" signature="946:989" placeholder="SELECT calls..calls..." />
@@ -1444,85 +1648,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/success.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24722663">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <folding>
-            <marker date="1527254655657" expanded="true" signature="917:960" placeholder="SELECT payme..payments..." />
-            <marker date="1527254655657" expanded="true" signature="1335:1350" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/records.php">
+    <entry file="file://$PROJECT_DIR$/Admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding>
-            <marker date="1538493128910" expanded="true" signature="587:680" placeholder="update sprov..." />
-            <marker date="1538493128910" expanded="true" signature="975:1091" placeholder="update users..." />
-            <marker date="1538493128910" expanded="true" signature="1334:1480" placeholder="SELECT payme..calls..." />
-            <marker date="1538493128910" expanded="true" signature="1674:1727" placeholder="update calls..." />
-            <marker date="1538493128910" expanded="true" signature="1772:1817" placeholder="update users..." />
-            <marker date="1538493128910" expanded="true" signature="1961:2015" placeholder="update users..." />
-            <marker date="1538493128910" expanded="true" signature="2147:2198" placeholder="update sprov..." />
-            <marker date="1538493128910" expanded="true" signature="2228:2258" placeholder="update sprov..." />
-            <marker date="1538493128910" expanded="true" signature="2228:2279" placeholder="update sprov..." />
-            <marker date="1538493128910" expanded="true" signature="2228:2285" placeholder="update sprov..." />
-            <marker date="1538493128910" expanded="true" signature="2228:2286" placeholder="update sprov..." />
-            <marker date="1538493128910" expanded="true" signature="2228:2293" placeholder="update sprov..." />
-            <marker date="1538493128910" expanded="true" signature="2430:2482" placeholder="update sprov..." />
-            <marker date="1538493128910" expanded="true" signature="2747:2863" placeholder="update users..." />
-          </folding>
+          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paymegetdata.php">
+    <entry file="file://$PROJECT_DIR$/approvepayment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7096774">
-          <caret line="173" column="32" selection-start-line="173" selection-start-column="32" selection-end-line="173" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.27586207">
+          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
           <folding>
-            <element signature="e#7054#7092#0#PHP" expanded="false" />
-            <element signature="e#7819#8362#0#PHP" expanded="false" />
+            <element signature="e#6#102#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sps.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.645162">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.935484">
+          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
           <folding>
-            <marker date="1539591563328" expanded="true" signature="340:350" placeholder="..." />
-            <marker date="1539591563328" expanded="true" signature="926:977" placeholder="SELECT ID, N..paymeapprovestatus..." />
-            <marker date="1539591563328" expanded="true" signature="1521:1539" placeholder="..." />
-            <marker date="1539591563328" expanded="true" signature="2373:2559" placeholder="SELECT id,na..sproviders..." />
-            <marker date="1539591563328" expanded="true" signature="2373:2630" placeholder="SELECT sprov..sproviders..." />
-            <marker date="1539591563328" expanded="true" signature="2373:2631" placeholder="SELECT sprov..sproviders..." />
-            <marker date="1539591563328" expanded="true" signature="2681:2706" placeholder="SELECT * FRO..listspadmin..." />
-            <marker date="1539591563328" expanded="true" signature="2681:2716" placeholder="SELECT * FRO..listspadmin..." />
+            <marker date="1544449590552" expanded="true" signature="340:350" placeholder="..." />
+            <marker date="1544449590552" expanded="true" signature="926:977" placeholder="SELECT ID, N..paymeapprovestatus..." />
+            <marker date="1544449590552" expanded="true" signature="1521:1539" placeholder="..." />
+            <marker date="1544449590552" expanded="true" signature="2373:2559" placeholder="SELECT id,na..sproviders..." />
+            <marker date="1544449590552" expanded="true" signature="2373:2630" placeholder="SELECT sprov..sproviders..." />
+            <marker date="1544449590552" expanded="true" signature="2373:2631" placeholder="SELECT sprov..sproviders..." />
+            <marker date="1544449590552" expanded="true" signature="2681:2706" placeholder="SELECT * FRO..listspadmin..." />
+            <marker date="1544449590552" expanded="true" signature="2681:2716" placeholder="SELECT * FRO..listspadmin..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users.php">
+    <entry file="file://$PROJECT_DIR$/records.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.225806">
-          <caret line="98" column="71" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.62068963">
+          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
           <folding>
-            <marker date="1539591563348" expanded="true" signature="340:350" placeholder="..." />
-            <marker date="1539591563348" expanded="true" signature="2057:2194" placeholder="SELECT users..users..." />
-            <marker date="1539591563348" expanded="true" signature="2206:2234" placeholder="SELECT * FRO..listusersadmin..." />
+            <marker date="1544518479072" expanded="true" signature="587:680" placeholder="update sprov..." />
+            <marker date="1544518479072" expanded="true" signature="975:1091" placeholder="UPDATE users..." />
+            <marker date="1544518479072" expanded="true" signature="981:1091" placeholder="update users..." />
+            <marker date="1544518479072" expanded="true" signature="1349:1495" placeholder="SELECT payme..calls..." />
+            <marker date="1544518479072" expanded="true" signature="1521:1565" placeholder="SELECT payme..payments..." />
+            <marker date="1544518479072" expanded="true" signature="1863:1904" placeholder="update payme..." />
+            <marker date="1544518479072" expanded="true" signature="1863:1916" placeholder="update payme..." />
+            <marker date="1544518479072" expanded="true" signature="1863:1917" placeholder="update payme..." />
+            <marker date="1544518479072" expanded="true" signature="1863:2042" placeholder="update payme..." />
+            <marker date="1544518479072" expanded="true" signature="1976:2029" placeholder="UPDATE calls..." />
+            <marker date="1544518479072" expanded="true" signature="1982:2029" placeholder="update calls..." />
+            <marker date="1544518479072" expanded="true" signature="2121:2166" placeholder="UPDATE sprov..." />
+            <marker date="1544518479072" expanded="true" signature="2127:2166" placeholder="update users..." />
+            <marker date="1544518479072" expanded="true" signature="2238:2291" placeholder="UPDATE calls..." />
+            <marker date="1544518479072" expanded="true" signature="2560:2614" placeholder="update users..." />
+            <marker date="1544518479072" expanded="true" signature="2746:2797" placeholder="update sprov..." />
+            <marker date="1544518479072" expanded="true" signature="2827:2857" placeholder="update sprov..." />
+            <marker date="1544518479072" expanded="true" signature="2827:2878" placeholder="update sprov..." />
+            <marker date="1544518479072" expanded="true" signature="2827:2884" placeholder="update sprov..." />
+            <marker date="1544518479072" expanded="true" signature="2827:2885" placeholder="update sprov..." />
+            <marker date="1544518479072" expanded="true" signature="2827:2892" placeholder="update sprov..." />
+            <marker date="1544518479072" expanded="true" signature="3029:3081" placeholder="update sprov..." />
+            <marker date="1544518479072" expanded="true" signature="3346:3462" placeholder="update users..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69058293">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
