@@ -167,17 +167,22 @@ function search(type) {
     }
 }
 
-function appr_rej(id,type,currentst,spid) {
+function appr_rej(id,type,currentst,spid,amnt,instl) {
     var newst = 0;
-    //alert(type +" "+currentst);
+    //alert("amount" +amnt+" installments "+instl);
     if (currentst.trim()==="1" || currentst.trim()==="2" || currentst.trim()==="4") {
         if (type==="approve") {
                 switch (currentst.trim()){
                     case "1" : newst=2; // Accepted
                         break;
-                    case "2" : newst=10; // approve by CC
+                    case "2" : newst=4; // approve by CC
                         break;
-                    case "4" : newst=10; // approve by CC
+                    case "4" :
+                        var famount = amnt;
+                        famount = prompt("Enter final amount:",amnt);
+                        var ins = instl;
+                        ins = prompt("Enter final number of installments:",instl);
+                        newst=10; // approve by CC
                         break;
                 }
                 //newst = 10;
@@ -196,11 +201,18 @@ function appr_rej(id,type,currentst,spid) {
             changestatuscall:'changestatuscall',
             row_id:id,
             status:newst,
-            spid : spid
+            spid : spid,
+            inst : ins,
+            famount : famount
         },
         success: function(result)  {
-            if (result.trim() != '') {
-                alert(result);
+            //alert(result);
+            if (result.trim() !== '') {
+                var res = JSON.parse(result);
+                if (res.status_code===1)
+                    alert("Something was wrong. Error details: "+res.status_error_details+" "+res.status_additional_info);
+                else
+                    alert("Payment amount "+res.payme_transaction_total+" NIS. Status of payment: "+res.basic_sale_status+". Payment date: "+res.sale_paid_date);
             }
             if (newst>0) window.location.reload();
         }
@@ -315,6 +327,11 @@ function showpayments_user(id) {
 
 function online_sps() {
     var w = window.open("./mapsps.php", "Online Service Providers", "resizable=yes,scrollbars=yes");
+}
+
+function pairsshow() {
+    //var callstatus = document.getElementById("callstatus").value
+    var w = window.open("./mapsps_users.php", "User-SP accepted calls", "resizable=yes,scrollbars=yes");
 }
 
 function showcalls(id)

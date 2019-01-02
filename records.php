@@ -43,12 +43,14 @@ if(isset($_POST['edit_row']))
 
 if(isset($_POST['changestatuscall']))
 {
-
  $row=$_POST['row_id'];
  $status=$_POST['status'];
  $spid=@$_POST['spid'];
  $saleid="";
  $alert="";
+ $amnt = @$_POST['famount'];
+ $instll = @$_POST['inst'];
+
  if ($status>0) {
    if ($status == 10) {
      /* $sql = "SELECT payments.paymetrid
@@ -57,12 +59,13 @@ if(isset($_POST['changestatuscall']))
       $sql = "SELECT paymetrid FROM payments WHERE callid=".$row;
       $select= mysqli_query($link,$sql);
       if ($res = mysqli_fetch_row($select)) $saleid = $res[0];
-       $resapprovement = approvepayment($saleid);
-       echo $resapprovement;
-       if ( $resapprovement == "Payment was approved successfully") {
+      $resapprovement = sendAPItoServer("capturesale,".$saleid.",".$amnt.",".$row.",".$instll);
+          //approvepayment($saleid);
+      echo $resapprovement;
+      /*if ( $resapprovement == "Payment was approved successfully") {
            mysqli_query($link,"UPDATE payments SET pstatus=2 WHERE paymetrid='".$saleid."'"); //Approvement of payment
            mysqli_query($link,"UPDATE calls SET status='$status' WHERE callid='$row'");
-       }
+      }*/
    }
    if ($status == 4 || $status == 7 || $status == 10) mysqli_query($link,"UPDATE sproviders SET busy=0 WHERE id='$spid'"); //Free SP after decline or approvement by CC
    mysqli_query($link,"UPDATE calls SET status='$status' WHERE callid='$row'");
@@ -178,5 +181,58 @@ function approvepayment($slid) {
     };
     curl_close($ch);
     return $alert;
+}
+
+function sendAPItoServer($api)
+{
+    $ini_array = parse_ini_file("options.ini");
+    error_reporting(E_ALL);
+
+    //echo "<h2>Соединение TCP/IP</h2>\n";
+
+    /* Получаем порт сервиса WWW. */
+    $service_port = $ini_array["port"];//getservbyname('www', 'tcp');
+
+    /* Получаем IP-адрес целевого хоста. */
+    $address = $ini_array["address"]; //gethostbyname('www.example.com');
+
+    /* Создаём сокет TCP/IP. */
+    $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+
+    if ($socket === false) {
+        //echo "Не удалось выполнить socket_create(): причина: " . socket_strerror(socket_last_error()) . "\n";
+        return socket_strerror(socket_last_error($socket)) . "\n";
+    } else {
+        //echo "OK.\n";
+    }
+
+    //echo "Пытаемся соединиться с '$address' на порту '$service_port'...";
+    $result = socket_connect($socket, $address, $service_port);
+    if ($result === false) {
+        //echo "Не удалось выполнить socket_connect().\nПричина: ($result) " . socket_strerror(socket_last_error($socket)) . "\n";
+        return socket_strerror(socket_last_error($socket)) . "\n";
+    } else {
+        //  echo "OK.\n";
+    }
+
+    $in = $api."\r\n"; //"getspbankdetails,68" . "\r\n";
+    $out = '';
+
+
+//$in .= "Host: www.example.com\r\n";
+//$in .= "Connection: Close\r\n\r\n";
+
+    //echo "Отправляем HTTP-запрос HEAD...";
+    //echo $in;
+    socket_write($socket, $in, strlen($in));
+    //echo "OK.\n";
+
+    //echo "Читаем ответ:\n\n";
+    $out = socket_read($socket, 8192);
+    //echo $out;
+    //echo "Закрываем сокет...";
+    socket_close($socket);
+    //echo "OK.\n\n";
+    return $out;
 }
 ?>

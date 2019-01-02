@@ -103,8 +103,8 @@ $select= mysqli_query($link,$sql.$where.$orderby);
   <td id="spname_val<?php echo $row['callid'];?>"><?php echo $row['spname'];?></td>
   <td id="spphone_val<?php echo $row['callid'];?>"><?php echo $row['spphone'];?></td>
   <td id="statusid_val<?php echo $row['callid'];?>" style="display: none;"><?php echo $row['status'];?></td>
-  <td>
-  <input type='button' class="show_button" id="approve_button<?php echo $row['callid'];?>" value="Approve" onclick="appr_rej('<?php echo $row['callid'];?>','approve','<?php echo $row['status'];?>','<?php echo $row['spid'];?>');">
+  <input type='button' class="show_button" id="approve_button<?php echo $row['callid'];?>" value="Approve"
+         onclick="appr_rej('<?php echo $row['callid'];?>','approve','<?php echo $row['status'];?>','<?php echo $row['spid'];?>','<?php echo $row['amount'];?>','<?php echo $row['installments'];?>');">
   <input type='button' class="show_button" id="reject_button<?php echo $row['callid'];?>" value="Reject" onclick="appr_rej('<?php echo $row['callid'];?>','reject','<?php echo $row['status'];?>','<?php echo $row['spid'];?>');">
   <input type='button' class="show_button" id="map_button<?php echo $row['callid'];?>" value="Show map" onclick="map('<?php echo $row['callid'];?>','<?php echo $uname;?>','<?php echo $row['spname'];?>');">
   </td>

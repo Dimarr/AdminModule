@@ -35,12 +35,12 @@ $sale_id = isset($_GET['saleid']) ? trim($_GET['saleid']) : "";
 
 if ($sale_id=="") {
     if ($sp == 1) {
-        $sql = "SELECT * FROM listpaymentsadmin WHERE spid=" . $rowid . " ORDER BY pdate";
+        $sql = "SELECT * FROM listpaymentsadmin WHERE spid=" . $rowid . " ORDER BY pdate DESC";
     } else {
-        $sql = "SELECT * FROM listpaymentsadmin WHERE userid=" . $rowid . " ORDER BY pdate";
+        $sql = "SELECT * FROM listpaymentsadmin WHERE userid=" . $rowid . " ORDER BY pdate DESC";
     }
 } else {
-    $sql = "SELECT * FROM listpaymentsadmin WHERE saleid='".$sale_id."' ORDER BY pdate";
+    $sql = "SELECT * FROM listpaymentsadmin WHERE saleid='".$sale_id."' ORDER BY pdate DESC";
 }
 //echo $sql;
 $select= mysqli_query($link,$sql);

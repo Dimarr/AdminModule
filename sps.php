@@ -31,6 +31,7 @@ $link = mysqli_connect($ini_array["url"], $ini_array["user"], $ini_array["passwo
 
 <button type="submit" class="show_button" onclick="search('sps')">Search</button>
 <button type="submit" class="show_button" onclick="online_sps()">Show online SPs</button>
+<button type="submit" class="show_button" onclick="pairsshow()">Show online pairs user-service provider</button>
 <button type="submit" class="show_button" align="right" onclick="logout()">Logout</button>
 
 <?php

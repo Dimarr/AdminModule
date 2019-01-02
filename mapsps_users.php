@@ -30,7 +30,9 @@ if (!$link) {
     echo "Details of error: " . mysqli_connect_error() . PHP_EOL;
     exit;
 }
-$sql="SELECT phone,name,x,y FROM sproviders WHERE logined=1 AND busy=0 AND x is not null AND y is not null ORDER BY name ";
+
+mysqli_query($link,"CALL showpairs");
+$sql="SELECT spname,username,spphone,userphone, spx,spy,userx,usery FROM showpairs";
 //    echo $sql.$where.$orderby;
 $select=mysqli_query($link,$sql);
 ?>
@@ -40,6 +42,8 @@ $select=mysqli_query($link,$sql);
     var locations = [];
     function initMap() {
 
+        var pinImage;
+        var markers;
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 8,
             center: {lat: 31.77765, lng: 35.23547}
@@ -47,13 +51,31 @@ $select=mysqli_query($link,$sql);
 
         // Create an array of alphabetical characters used to label the markers.
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var images = [];
+        var pinColor = ["C0C0C0","FF00FF","800080","800000","FFFF00","808000","00FF00","008000","00FFFF","008080","0000FF","000080",
+            "FF00FF","FF00FF","BA55D3","9370DB","8A2BE2","9400D3","9932CC","8B008B","800080","4B0082","6A5ACD","483D8B","7FFFD4","006400"];
+
+        for (i = 0; i < 26; i++) {
+            pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor[i],
+                new google.maps.Size(21, 34),
+                new google.maps.Point(0,0),
+                new google.maps.Point(10, 34));
+/*            var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+                new google.maps.Size(40, 37),
+                new google.maps.Point(0, 0),
+                new google.maps.Point(12, 35)); */
+            images.push(pinImage);
+        }
         var titles = [];
         <?php
             while ($row=mysqli_fetch_array($select))
             {
         ?>
-            titles.push('<?php echo $row['name']." ".$row['phone'] ?>');
-            locations.push({lat: <?php echo $row['x'] ?>, lng: <?php echo $row['y'] ?>})
+            titles.push('<?php echo "SP: ".$row['spname']." ".$row['spphone'] ?>');
+            locations.push({lat: <?php echo $row['spx'] ?>, lng: <?php echo $row['spy'] ?>})
+
+            titles.push('<?php echo "Customer: ".$row['username']." ".$row['userphone'] ?>');
+            locations.push({lat: <?php echo $row['userx'] ?>, lng: <?php echo $row['usery'] ?>})
         <?php }
             mysqli_close($link);
         ?>
@@ -65,11 +87,12 @@ $select=mysqli_query($link,$sql);
         // Note: The code uses the JavaScript Array.prototype.map() method to
         // create an array of markers based on a given "locations" array.
         // The map() method here has nothing to do with the Google Maps API.
-        var markers = locations.map(function (location, i) {
+        markers = locations.map(function (location, i) {
             return new google.maps.Marker({
                 position: location,
                 label: labels[i % labels.length],
-                title: titles[i]
+                title: titles[i],
+                icon : images[Math.floor(i/2)]
             });
         });
 
