@@ -220,6 +220,32 @@ function appr_rej(id,type,currentst,spid,amnt,instl) {
 
 }
 
+function toexcel(sql,datatype) {
+    $.ajax
+    ({
+        type: 'POST',
+        url: './records.php',
+        data: {
+            sql: sql,
+            toexcel: 'toexcel'
+        },
+        success: function (result) {
+            var dt = new Date().toLocaleDateString();
+            download("data:text/html,"+result,datatype+"_"+dt+".xls");
+        }
+    });
+}
+
+function download(dataurl, filename) {
+    var a = document.createElement("a");
+    a.href = dataurl;
+    a.setAttribute("download", filename);
+    var b = document.createEvent("MouseEvents");
+    b.initEvent("click", false, true);
+    a.dispatchEvent(b);
+    return false;
+}
+
 function showcarpic_user(pic) {
     if (pic.trim().indexOf("://")>0) {
         var w = window.open(pic, "Picture of user's car", "resizable=yes,scrollbars=yes");

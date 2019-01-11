@@ -139,6 +139,44 @@ if(isset($_POST['map']))
   echo json_encode($arHash);
   exit;
 }
+
+if(isset($_POST['toexcel']))
+{
+    $sql = $_POST['sql'];
+    $result = mysqli_query($link,$sql);
+    $arrfields = mysqli_fetch_fields($result);
+    $header='';
+    foreach ($arrfields as $val) {
+        $header.= $val->name . "\t";
+    }
+    //$header.="\n";
+
+    $setData = '';
+
+    while ($rec = mysqli_fetch_row($result)) {
+        $rowData = '';
+        foreach ($rec as $value) {
+            $rowData .= '"' . $value . '"' . "\t";
+        }
+        $setData .= trim($rowData) . "\n";
+    }
+
+/*    $fh=header("Content-type: application/octet-stream")."\n";
+    $fh.=header("Content-Disposition: attachment; filename=User_Detail_Reoprt.xls")."\n";
+    $fh.=header("Pragma: no-cache")."\n";
+    $fh.=header("Expires: 0")."\n";
+
+    header("Content-type: application/xls");
+    header("Content-Disposition: attachment; filename=D:\\U.xls");
+    header("Pragma: no-cache");
+    header("Expires: 0");*/
+    //$file="U.xls";
+    //file_put_contents($file, ucwords($header) . "\n" . $setData . "\n");
+    echo ucwords($header) . "\n" . $setData . "\n";
+    //echo $t;
+    //print("\n");
+}
+
 function approvepayment($slid) {
     $ini_array = parse_ini_file("options.ini");
 //$paymeclient = $ini_array["paymeclient"];

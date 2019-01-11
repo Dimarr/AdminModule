@@ -54,6 +54,7 @@ function selleridbySpID($row_id) {
 ?>
 <button type="submit" class="show_button" onclick="search_payments('<?php echo selleridbySpID($rowid);?>')">Search</button>
 <button type="submit" class="show_button" onclick="all_payments('<?php echo $sp;?>','<?php echo $rowid;?>')">All Payments</button>
+<button type="submit" class="excel_button" onclick="toexcel('<?php echo $sql;?>','payments')">Export to Excel</button>
 <br>
 <table align="left" cellpadding="10" border="1" id="user_table">
  <tr>

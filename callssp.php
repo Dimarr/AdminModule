@@ -57,9 +57,6 @@ $sql="SELECT name FROM sproviders WHERE id=".$rowid;
 $select= mysqli_query($link,$sql);
 $row=mysqli_fetch_array($select);
 $title="Requests for ".$row['name'];
-?>
-<title><?php echo $title ?></title>
-<?php
 /*$sql="SELECT calls.callid,date_format(cdate,'%Y-%m-%d %H:%i') as cdate,details,callstatus.statusname,  calls.status as statusid, users.firstname, users.lastname ,users.phone , servicetype.name as service
 FROM mobi1.calls, users, servicetype, callstatus
 WHERE callstatus.statusid= calls.status AND calls.userid= users.userid AND servicetype.id=calls.serviceid AND calls.spid='$rowid'"; */
@@ -77,6 +74,8 @@ if ($callid!="") {
 //echo $sql.$where.$orderby;
 $select= mysqli_query($link,$sql.$where.$orderby);
 ?>
+<button type="submit" class="excel_button" onclick="toexcel('<?php echo $sql.$where.$orderby;?>','calls_sps')">Export to Excel</button>
+<title><?php echo $title ?></title>
 <table align="center" cellpadding="10" border="1" id="user_table">
  <tr>
   <th>Request number</th>

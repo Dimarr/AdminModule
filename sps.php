@@ -36,7 +36,6 @@ $link = mysqli_connect($ini_array["url"], $ini_array["user"], $ini_array["passwo
 
 <?php
 //echo "eeee";
-echo "<div style=\"text-align:center;\"><b>  Market Fee value is ".$ini_array["marketfee"]." %</div>";
 //echo $_SERVER['DOCUMENT_ROOT'];
 
 if (!$link) {
@@ -76,6 +75,8 @@ $sql = "SELECT * FROM listspadmin WHERE 1=1";
 calls.details, callstatus.statusname as Status
 FROM mobi1.users, calls, callstatus WHERE users.userid= calls.userid AND calls.status=callstatus.statusid;");*/
 ?>
+    <button type="submit" class="excel_button" onclick="toexcel('<?php echo $sql.$where.$orderby;?>','sps')">Export to Excel</button>
+    <?php echo "<div style=\"text-align:center;\"><b>  Market Fee value is ".$ini_array["marketfee"]." %</div>";?>
     <br>
     <body>
     <div id="wrapper">

@@ -18,9 +18,6 @@ if (!isset($_SESSION["is_auth"])){
 <input type="search" id ="Email" name="Email" placeholder="Email">
 <button type="submit" class="show_button" onclick="search('users')">Search</button>
 <button type="submit" class="show_button" align="right" onclick="logout()">Logout</button>
-<br>
-<body
-<div id="wrapper">
 
 <?php
 //echo "eeee";
@@ -69,6 +66,10 @@ $orderby=" ORDER BY lastname,firstname,rating DESC ";
 calls.details, callstatus.statusname as Status
 FROM mobi1.users, calls, callstatus WHERE users.userid= calls.userid AND calls.status=callstatus.statusid;");*/
 ?>
+    <button type="submit" class="excel_button" onclick="toexcel('<?php echo $sql.$where.$orderby;?>','users')">Export to Excel</button>
+    <br>
+    <body
+    <div id="wrapper">
     <table align="center" cellpadding="10" border="1" id="user_table">
         <tr>
             <th>FIRST NAME</th>
